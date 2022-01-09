@@ -1,12 +1,10 @@
-from typing import Generator
+import itertools
+from typing import Generator, Iterable
+
+import cv2
 import filetype
 import numpy as np
-import cv2
-import itertools
-from typing import Iterable
 from deepstack_sdk import ServerConfig
-
-"Find image files in a directory"
 
 
 def find_images(path) -> Generator:
@@ -15,16 +13,10 @@ def find_images(path) -> Generator:
             yield file
 
 
-"Find videos in a directory"
-
-
 def find_videos(path) -> Generator:
     for file in path.iterdir():
         if filetype.is_video(file):
             yield file
-
-
-"Find font files in the given path"
 
 
 def find_fonts(path) -> Generator:
@@ -41,9 +33,6 @@ def height(frame: np.ndarray) -> int:
     return frame.shape[0]
 
 
-"""Rotate image"""
-
-
 def rotate(img: np.ndarray, angle, center=None, scale=1.0) -> np.ndarray:
     # get the dimensions of the image
     (height, width) = img.shape[:2]
@@ -58,9 +47,6 @@ def rotate(img: np.ndarray, angle, center=None, scale=1.0) -> np.ndarray:
 
     # return the rotated image
     return rotated_img
-
-
-"Resize image to a size (width, height)"
 
 
 def resize(img: np.ndarray, width, height, inter=cv2.INTER_AREA) -> np.ndarray:
@@ -81,14 +67,8 @@ def resize(img: np.ndarray, width, height, inter=cv2.INTER_AREA) -> np.ndarray:
     return resized
 
 
-"Concatenate two images"
-
-
 def concatenate(image1: np.ndarray, image2: np.ndarray, axis=1) -> np.ndarray:
     return np.concatenate((image1, image2), axis=axis)
-
-
-"Split a list into batches of size n"
 
 
 def batch(iterable: Iterable, n: int) -> Generator:
@@ -97,14 +77,8 @@ def batch(iterable: Iterable, n: int) -> Generator:
         yield item
 
 
-"Check if the give object is of the given type name"
-
-
 def is_type(obj, type_name):
     return type(obj).__name__ == type_name
-
-
-"Verify if the given object is a Frame object"
 
 
 def verify_frame_type(func):
@@ -116,9 +90,6 @@ def verify_frame_type(func):
     return wrapper
 
 
-"Send a copy of the frame to the given function"
-
-
 def copy_frame(func):
     def wrapper(*args, **kwargs):
         frame = args[0]
@@ -126,9 +97,6 @@ def copy_frame(func):
         return func(new_frame, *args[1:], **kwargs)
 
     return wrapper
-
-
-"Verify that the given config is a ServerConfig object"
 
 
 def verify_deepstack_config(func):
@@ -150,9 +118,6 @@ def verify_deepstack_config(func):
     return wrapper
 
 
-"A class to represent template matching results"
-
-
 class TemplateResponse(object):
     def __init__(self, frame, loc, template):
         self.frame = frame
@@ -161,8 +126,6 @@ class TemplateResponse(object):
         self.w = template.shape[1]
         self.h = template.shape[0]
         self.orig = frame.copy()
-
-    "Draw boxex around matched"
 
     def draw_boxes(self):
         for x, y, w, h, color in self.boxes():
@@ -181,8 +144,6 @@ class TemplateResponse(object):
 
 
 # OpenCV functions
-
-"Returns the image grayed"
 
 
 def gray(frame: np.ndarray) -> np.ndarray:
@@ -262,17 +223,17 @@ def search(frame, template, method=cv2.TM_CCOEFF_NORMED, threshold=0.8):
     return TemplateResponse(frame, loc, template)
 
 
-def stack(frames: list, resize=None, cols=2) -> np.ndarray:
+def stack(frames: list, resize_=None, cols=2) -> np.ndarray:
 
     # The minimum width and height of the stack is the width and height of the smallest frame
     min_width = min([width(frame) for frame in frames])
     min_height = min([height(frame) for frame in frames])
 
-    if resize is not None:
-        min_width = resize[0]
-        min_height = resize[1]
+    if resize_ is not None:
+        min_width = resize_[0]
+        min_height = resize_[1]
     # Resize each frame to the minimum width and height
-    frames = [frame.resize(min_width, min_height) for frame in frames]
+    frames = [resize(frame, min_width, min_height) for frame in frames]
 
     # Calculate the width and height of the stack by summing the width and height of each frame
     _width = sum([width(frame) for frame in frames])
