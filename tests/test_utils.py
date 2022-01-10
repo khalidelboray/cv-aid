@@ -6,7 +6,7 @@ import cv2
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from cv_aid.utils import width, height, rotate, resize, concatenate
+from cv_aid.utils import width, height, rotate, resize, concatenate, stack
 
 class TestWidth(unittest.TestCase):
     """Test width"""
@@ -74,7 +74,24 @@ class TestConcatenate(unittest.TestCase):
         difference = cv2.subtract(concatenated, concatenated_loc)
         self.assertTrue(np.sum(difference) == 0)
 
+class TestStack(unittest.TestCase):
+    """Test stack"""
+
+    def setup(self):
+        """Setup"""
+        self.img = cv2.imread(os.path.join(os.path.dirname(__file__), 'egypt.webp'))
+        self.img2 = cv2.imread(os.path.join(os.path.dirname(__file__), 'egypt.webp'))
+
+
+    def test_stack(self):
+        """Test stack"""
+
+        self.setup()
+        stacked = stack([self.img, self.img2],cols=2)
+        stacked_loc = cv2.imread(os.path.join(os.path.dirname(__file__), 'test_stacked.webp'))
+        self.assertTrue(np.array_equal(stacked, stacked_loc))
+        difference = cv2.subtract(stacked, stacked_loc)
+        self.assertTrue(np.sum(difference) == 0)
 
 if __name__ == '__main__':
     unittest.main()
-    

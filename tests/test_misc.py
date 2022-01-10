@@ -26,7 +26,7 @@ class TestImages(unittest.TestCase):
         """Test find_images"""
         images = find_images(Path(os.path.dirname(__file__)))
         self.assertTrue(isinstance(images, Generator))
-        self.assertTrue(len(list(images)) == 4)
+        self.assertTrue(len(list(images)) == 5)
 
 
 class TestVideo(unittest.TestCase):
