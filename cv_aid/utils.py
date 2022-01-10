@@ -1,4 +1,5 @@
 import itertools
+from pathlib import Path
 from typing import Generator, Iterable
 
 import cv2
@@ -7,20 +8,26 @@ import numpy as np
 from deepstack_sdk import ServerConfig
 
 
-def find_images(path) -> Generator:
+def find_images(path: Path) -> Generator:
     for file in path.iterdir():
+        if file.is_dir():
+            continue
         if filetype.is_image(file):
             yield file
 
 
-def find_videos(path) -> Generator:
+def find_videos(path: Path) -> Generator:
     for file in path.iterdir():
+        if file.is_dir():
+            continue
         if filetype.is_video(file):
             yield file
 
 
-def find_fonts(path) -> Generator:
+def find_fonts(path: Path) -> Generator:
     for file in path.iterdir():
+        if file.is_dir():
+            continue
         if filetype.is_font(file):
             yield file
 
@@ -38,7 +45,7 @@ def rotate(img: np.ndarray, angle, center=None, scale=1.0) -> np.ndarray:
     (height, width) = img.shape[:2]
 
     # if the center is None, initialize it as the center of the image
-    if center == None:
+    if center is None:
         center = (width / 2, height / 2)
 
     # the rotation
@@ -54,7 +61,7 @@ def resize(img: np.ndarray, width, height, inter=cv2.INTER_AREA) -> np.ndarray:
         # calculate the ratio of the height and construct the
         # dimensions
         ratio = height / float(height)
-        dim = (int(width * ratio), height)
+        dim = (int(img.shape[1] * ratio), height)
     else:
         # calculate the ratio of the width and construct the
         # dimensions

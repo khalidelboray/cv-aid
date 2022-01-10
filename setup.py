@@ -1,8 +1,11 @@
 from setuptools import setup
 
+with open("README.md", "r") as f:
+    long_description = f.read()
+    
 setup(
     name="cv-aid",
-    long_description=open("README.md").read(),
+    long_description=long_description,
     long_description_content_type="text/markdown",
     install_requires=[
         "deepstack_sdk==0.2.1",
