@@ -206,7 +206,7 @@ def box(
     return frame
 
 
-def boxes(self, frame, boxes, **kwargs):
+def boxes(frame, boxes, **kwargs):
     for box in boxes:
         frame = box(frame, *box, **kwargs)
     return frame
