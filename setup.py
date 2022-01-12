@@ -2,7 +2,7 @@ from setuptools import setup
 
 with open("README.md", "r") as f:
     long_description = f.read()
-    
+
 setup(
     name="cv-aid",
     long_description=long_description,

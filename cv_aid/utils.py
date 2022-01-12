@@ -165,24 +165,55 @@ def blur(frame: np.ndarray, ksize=(5, 5)) -> np.ndarray:
     return cv2.GaussianBlur(frame, ksize, 0)
 
 
+def flip(frame: np.ndarray, flip_code=1) -> np.ndarray:
+    return cv2.flip(frame, flip_code)
+
+
 def line(
-    frame: np.ndarray, start: tuple, end: tuple, color=(0, 255, 0), thickness=2
+    frame: np.ndarray,
+    start: tuple,
+    end: tuple,
+    color=(0, 255, 0),
+    thickness=2,
+    line_type=cv2.LINE_8,
 ) -> np.ndarray:
-    return cv2.line(frame, start, end, color, thickness)
+    return cv2.line(frame, start, end, color, thickness, line_type)
 
 
-def lines(frame, lines: list):
-    for line in lines:
-        frame = line(frame, *line)
+def lines(frame, points: list, **kwargs):
+    for point in points:
+        frame = line(frame, *point, **kwargs)
     return frame
 
 
-def box(frame: np.ndarray, x, y, w, h, color=(0, 255, 0), max=False) -> np.ndarray:
+def box(
+    frame: np.ndarray,
+    x,
+    y,
+    w,
+    h,
+    color=(0, 255, 0),
+    thickness=1,
+    line_type=cv2.LINE_8,
+    max=False,
+) -> np.ndarray:
     if max:
-        frame = cv2.rectangle(frame, (x, y), (w, h), color, 2)
+        frame = cv2.rectangle(frame, (x, y), (w, h), color, thickness, line_type)
     else:
-        frame = cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
+        frame = cv2.rectangle(
+            frame, (x, y), (x + w, y + h), color, thickness, line_type
+        )
     return frame
+
+
+def boxes(self, frame, boxes, **kwargs):
+    for box in boxes:
+        frame = box(frame, *box, **kwargs)
+    return frame
+
+
+def canny(frame: np.ndarray, threshold1=100, threshold2=200) -> np.ndarray:
+    return cv2.Canny(frame, threshold1, threshold2)
 
 
 def text(
