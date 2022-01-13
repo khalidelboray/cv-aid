@@ -14,6 +14,12 @@ poetry install
 poetry run python setup.py install
 ```
 
+## Tests
+
+`poetry run test`
+
+all tests are in `tests/` directory.
+
 ## Examples
 
 - Basic Frame Functions
