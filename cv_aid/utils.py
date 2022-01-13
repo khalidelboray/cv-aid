@@ -222,7 +222,7 @@ def verify_deepstack_config(func):
     return wrapper
 
 
-class TemplateResponse(object):
+class TemplateResponse:
     """
     TemplateResponse class.
     """
