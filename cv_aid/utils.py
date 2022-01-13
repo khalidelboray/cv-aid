@@ -53,7 +53,7 @@ def find_fonts(path: Path) -> Generator:
             yield file
 
 
-def rotate(img: np.ndarray, angle, center=None, scale=1.0) -> np.ndarray:
+def rotate(img: np.ndarray, angle, center=None, scale=1.0, same_dim=True) -> np.ndarray:
     """
     Rotates an image.
 
@@ -65,8 +65,13 @@ def rotate(img: np.ndarray, angle, center=None, scale=1.0) -> np.ndarray:
     :type center: tuple
     :param scale: scale of the image
     :type scale: float
+    :param same_dim: if True, the image will be resized to the same dimensions as the original
+    :type same_dim: bool
     :return: rotated image
     """
+
+    if not same_dim:
+        return cv2.rotate(img, angle)
     # get the dimensions of the image
     (height, width) = img.shape[:2]
 

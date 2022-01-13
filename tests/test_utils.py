@@ -6,23 +6,7 @@ import cv2
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from cv_aid.utils import width, height, rotate, resize, concatenate, stack
-
-
-class TestWidth(unittest.TestCase):
-    """Test width"""
-
-    def test_width(self):
-        """Test width"""
-        self.assertTrue(width(np.zeros((10, 10))) == 10)
-
-
-class TestHeight(unittest.TestCase):
-    """Test height"""
-
-    def test_height(self):
-        """Test height"""
-        self.assertTrue(height(np.zeros((10, 10))) == 10)
+from cv_aid.utils import rotate, resize, concatenate, stack
 
 
 class TestRotate(unittest.TestCase):

@@ -88,7 +88,7 @@ class Frame:  # pylint: disable=too-many-public-methods
         """
         return Frame(utils.resize(self.frame, width, height, inter))
 
-    def rotate(self, angle, center=None, scale=1.0) -> "Frame":
+    def rotate(self, angle, center=None, scale=1.0, same_dim=True) -> "Frame":
         """Rotate the frame.
 
         :param angle: The angle to rotate the frame by.
@@ -99,7 +99,7 @@ class Frame:  # pylint: disable=too-many-public-methods
         :type scale: float
         :return: The resulting frame.
         """
-        return Frame(utils.rotate(self.frame, angle, center, scale))
+        return Frame(utils.rotate(self.frame, angle, center, scale, same_dim))
 
     def flip(self, flip_code) -> "Frame":
         """Flip the frame.
@@ -183,7 +183,9 @@ class Frame:  # pylint: disable=too-many-public-methods
         """
         return Frame(utils.canny(self.frame, threshold1, threshold2))
 
-    def line(self, start, end, color, thickness=1, line_type=cv2.LINE_8) -> "Frame":
+    def line(
+        self, start, end, color=(0, 255, 0), thickness=1, line_type=cv2.LINE_8
+    ) -> "Frame":
         """Draw a line on the frame.
 
         :param start: The start of the line.
