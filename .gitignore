@@ -131,3 +131,5 @@ latex/
 html/
 pycco_docs/
 doxygen
+apidocs/
+xml/
