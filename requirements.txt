@@ -1,5 +1,30 @@
-deepstack_sdk==0.2.1
+atomicwrites==1.4.0; python_version >= "3.6" and python_full_version < "3.0.0" and sys_platform == "win32" or sys_platform == "win32" and python_version >= "3.6" and python_full_version >= "3.4.0"
+attrs==21.4.0; python_version >= "3.6" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version >= "3.6"
+certifi==2021.10.8; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.6.0"
+charset-normalizer==2.0.10; python_full_version >= "3.6.0" and python_version >= "3"
+colorama==0.4.4; python_version >= "3.6" and python_full_version < "3.0.0" and sys_platform == "win32" or sys_platform == "win32" and python_version >= "3.6" and python_full_version >= "3.5.0"
+cycler==0.11.0; python_version >= "3.7"
+decorator==5.1.1; python_version >= "3.5"
+deepstack-sdk==0.2.1
 filetype==1.0.9
-numpy==1.19.5
-opencv_python_inference_engine==2021.10.10
-setuptools==45.2.0
+fonttools==4.28.5; python_version >= "3.7"
+idna==3.3; python_version >= "3.5" and python_full_version < "3.0.0" or python_full_version >= "3.6.0" and python_version >= "3.5"
+iniconfig==1.1.1; python_version >= "3.6"
+kiwisolver==1.3.2; python_version >= "3.7"
+matplotlib==3.5.1; python_version >= "3.7"
+numpy==1.22.0; python_version >= "3.8"
+opencv-python==4.5.5.62; python_version >= "3.6"
+packaging==21.3; python_version >= "3.7"
+pillow==9.0.0; python_version >= "3.7"
+pluggy==1.0.0; python_version >= "3.6"
+py==1.11.0; python_version >= "3.6" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version >= "3.6"
+pyparsing==3.0.6; python_version >= "3.7"
+pytest==6.2.5; python_version >= "3.6"
+python-dateutil==2.8.2; python_version >= "3.7" and python_full_version < "3.0.0" or python_full_version >= "3.3.0" and python_version >= "3.7"
+requests==2.27.1; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.6.0"
+setuptools-scm==6.3.2; python_version >= "3.7"
+six==1.16.0; python_version >= "3.7" and python_full_version < "3.0.0" or python_full_version >= "3.3.0" and python_version >= "3.7"
+toml==0.10.2; python_version >= "3.6" and python_full_version < "3.0.0" or python_full_version >= "3.3.0" and python_version >= "3.6"
+tomli==2.0.0; python_version >= "3.7"
+urllib3==1.26.8; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.6.0" and python_version < "4"
+validators==0.18.2; python_version >= "3.4"
