@@ -47,3 +47,6 @@ all tests are in `tests/` directory.
     # Save image
     frame.save('/path/to/image.jpg')
     ```
+
+- Basic Video Functions
+
