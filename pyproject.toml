@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "cv-aid"
-version = "0.1.1"
-description = "CV Aid is a set of helpers of computer vision tasks."
+version = "0.1.4"
+description = "CV Aid is a set of helpers for computer vision tasks."
 authors = ["Khalid Mohamed Elborai <accnew820@gmail.com>"]
 license = "GNU Version 3"
 packages = [
@@ -12,7 +12,7 @@ packages = [
     { include = "scripts.py", format = "wheel" },
 ]
 readme = "README.md"
-repository = "https://github.com/khalidelborai/cv-aid"
+repository = "https://github.com/khalidelboray/cv-aid"
 keywords = ["computer vision", "cv", "image", "processing", "helpers","open-cv"]
 
 
@@ -20,6 +20,9 @@ keywords = ["computer vision", "cv", "image", "processing", "helpers","open-cv"]
 python = "^3.8"
 deepstack-sdk = "^0.2.1"
 filetype = "^1.0.9"
+numpy = "^1.21"
+opencv-python = "^4.1.0"
+
 
 [tool.poetry.dev-dependencies]
 
