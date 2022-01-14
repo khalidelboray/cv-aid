@@ -82,3 +82,7 @@ all tests are in `tests/` directory.
     stream = VideoStream(src=0, on_frame=on_frame).start()
     stream.start_window()
     ```
+
+    *Output Demo:*
+
+    ![Code Window](/images/stream.png)
