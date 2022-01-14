@@ -1,5 +1,6 @@
-import os
-from operator import is_
+# pylint: disable=C0103
+__docformat__ = "restructuredtext en"
+
 from threading import Thread
 
 import cv2

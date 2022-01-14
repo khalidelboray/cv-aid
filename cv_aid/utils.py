@@ -1,3 +1,6 @@
+# pylint: disable=C0103
+__docformat__ = "restructuredtext en"
+
 import itertools
 from pathlib import Path
 from typing import Generator, Iterable
@@ -133,7 +136,7 @@ def concatenate(image1: np.ndarray, image2: np.ndarray, axis=1) -> np.ndarray:
     return np.concatenate((image1, image2), axis=axis)
 
 
-def batch(iterable: Iterable, n: int) -> Generator:
+def batch(iterable: Iterable, length: int) -> Generator:
     """
     Batches an iterable.
 
@@ -143,8 +146,8 @@ def batch(iterable: Iterable, n: int) -> Generator:
     :type n: int
     :return: generator of batches
     """
-    it = iter(iterable)
-    while item := list(itertools.islice(it, n)):
+    iterator = iter(iterable)
+    while item := list(itertools.islice(iterator, length)):
         yield item
 
 
@@ -210,7 +213,9 @@ def verify_deepstack_config(func):
             try:
                 server_config = args[1]
             except KeyError:
-                raise ValueError("The server_config must be a ServerConfig object")
+                raise ValueError(
+                    "The server_config must be a ServerConfig object"
+                ) from None
 
         if server_config is None or not isinstance(server_config, ServerConfig):
             raise ValueError("The server_config must be a ServerConfig object")
@@ -241,8 +246,8 @@ class TemplateResponse:
         self.frame = frame
         self.loc = loc
         self.template = template
-        self.w = template.shape[1]
-        self.h = template.shape[0]
+        self.width = template.shape[1]
+        self.height = template.shape[0]
         self.orig = frame.copy()
 
     def draw_boxes(self) -> "TemplateResponse":
@@ -251,15 +256,15 @@ class TemplateResponse:
 
         :return: The resulting TemplateResponse object
         """
-        for x, y, w, h, color in self.boxes():
-            self.frame = box(self.frame, x, y, w, h, color)
+        for x, y, width, height, color in self.boxes():
+            self.frame = box(self.frame, x, y, width, height, color)
         return self
 
     def __len__(self):
         return len(self.boxes())
 
     def __repr__(self):
-        return "TemplateResponse({})".format(self.frame)
+        return f"TemplateResponse({self.frame})"
 
     def boxes(self, color=(0, 255, 0)) -> Generator:
         """
@@ -271,8 +276,14 @@ class TemplateResponse:
         """
         # for x, y in self.loc:
         # yield x, y, self.w, self.h, color
-        for pt in zip(*self.loc[::-1]):
-            yield [pt[0], pt[1], pt[0] + self.w, pt[1] + self.h, color]
+        for point in zip(*self.loc[::-1]):
+            yield [
+                point[0],
+                point[1],
+                point[0] + self.width,
+                point[1] + self.height,
+                color,
+            ]
 
 
 # OpenCV functions
@@ -289,7 +300,7 @@ def gray(frame: np.ndarray) -> np.ndarray:
     return cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 
-def crop(frame: np.ndarray, x, y, w, h) -> np.ndarray:
+def crop(frame: np.ndarray, x, y, width, height) -> np.ndarray:
     """
     Crops an image.
 
@@ -305,7 +316,7 @@ def crop(frame: np.ndarray, x, y, w, h) -> np.ndarray:
     :type h: int
     :return: cropped image
     """
-    return frame[y : y + h, x : x + w]
+    return frame[y : y + height, x : x + width]
 
 
 def blur(frame: np.ndarray, ksize=(5, 5)) -> np.ndarray:
@@ -375,7 +386,7 @@ def lines(frame, points: list, **kwargs):
     :return: image with the lines
     """
     for i in range(len(points) - 1):
-        frame = line(frame, points[i], points[i + 1], **kwargs)
+        frame = line(frame, points[i][0], points[i][1], **kwargs)
     return frame
 
 
@@ -383,12 +394,12 @@ def box(
     frame: np.ndarray,
     x,
     y,
-    w,
-    h,
+    width,
+    height,
     color=(0, 255, 0),
     thickness=1,
     line_type=cv2.LINE_8,
-    max=False,  # pylint: disable=redefined-outer-name
+    is_max=False,  # pylint: disable=redefined-outer-name
 ) -> np.ndarray:
     """
     Draws a box on an image.
@@ -413,28 +424,30 @@ def box(
     :type max: bool
     :return: image with the box
     """
-    if max:
-        frame = cv2.rectangle(frame, (x, y), (w, h), color, thickness, line_type)
+    if is_max:
+        frame = cv2.rectangle(
+            frame, (x, y), (width, height), color, thickness, line_type
+        )
     else:
         frame = cv2.rectangle(
-            frame, (x, y), (x + w, y + h), color, thickness, line_type
+            frame, (x, y), (x + width, y + height), color, thickness, line_type
         )
     return frame
 
 
-def boxes(frame, boxes, **kwargs):
+def boxes(frame, cords, **kwargs):
     """
     Draws multiple boxes on an image.
 
     :param frame: image to draw the boxes on
     :type frame: np.ndarray
-    :param boxes: list of boxes to draw
-    :type boxes: list
+    :param cords: list of coordinates of the boxes
+    :type cords: list
     :param kwargs: keyword arguments for box
     :type kwargs: dict
     :return: image with the boxes
     """
-    for _box in boxes:
+    for _box in cords:
         frame = box(frame, *_box, **kwargs)
     return frame
 
@@ -456,7 +469,7 @@ def canny(frame: np.ndarray, threshold1=100, threshold2=200) -> np.ndarray:
 
 def text(
     frame: np.ndarray,
-    text: str,
+    text_: str,
     x: int,
     y: int,
     font=cv2.FONT_HERSHEY_SIMPLEX,
@@ -469,8 +482,8 @@ def text(
 
     :param frame: image to draw the text on
     :type frame: np.ndarray
-    :param text: text to draw
-    :type text: str
+    :param text_: text to draw
+    :type text_: str
     :param x: x coordinate of the top left corner
     :type x: int
     :param y: y coordinate of the top left corner
@@ -485,13 +498,13 @@ def text(
     :type thickness: int
     :return: image with the text
     """
-    return cv2.putText(frame, text, (x, y), font, scale, color, thickness, cv2.LINE_AA)
+    return cv2.putText(frame, text_, (x, y), font, scale, color, thickness, cv2.LINE_AA)
 
 
 def text_above_box(
     frame: np.ndarray,
     text_: str,
-    box: tuple,
+    cords: tuple,
     font=cv2.FONT_HERSHEY_SIMPLEX,
     scale=0.5,
     color=(0, 255, 0),
@@ -504,8 +517,8 @@ def text_above_box(
     :type frame: np.ndarray
     :param text_: text to draw
     :type text_: str
-    :param box: box to draw the text above
-    :type box: tuple
+    :param cords: coordinates of the box
+    :type cords: tuple
     :param font: font to use for the text
     :type font: int
     :param scale: scale of the text
@@ -519,8 +532,8 @@ def text_above_box(
     return text(
         frame,
         text_,
-        box[0],
-        box[1] - int(scale * 30),
+        cords[0],
+        cords[1] - int(scale * 30),
         font,
         scale,
         color,
@@ -561,21 +574,6 @@ def stack(frames: list, resize_=None, cols=2) -> np.ndarray:
     :type cols: int
     :return: stacked frames
     """
-    # if resize_ is None:
-    #     resize_ = (
-    #         int(frames[0].shape[1] / 2),
-    #         int(frames[0].shape[0] / 2),
-    #     )
-    # if resize_ is not None:
-    #     frames = [resize(frame, resize_) for frame in frames]
-    # rows = int(np.ceil(len(frames) / cols))
-    # stacked = np.zeros((rows * resize_[1], cols * resize_[0], 3), np.uint8)
-    # for i in range(len(frames)):
-    #     row = int(i / cols)
-    #     col = i % cols
-    #     stacked[row * resize_[1] : (row + 1) * resize_[1], col * resize_[0] : (col + 1) * resize_[0]] = frames[i]
-    # return stacked
-    # The minimum width and height of the stack is the width and height of the smallest frame
     min_width = min([frame.shape[1] for frame in frames])
     min_height = min([frame.shape[0] for frame in frames])
 

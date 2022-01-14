@@ -1,11 +1,12 @@
 # pydoctor --project-base-dir=. --make-html --docformat=restructuredtext cv_aid/
+# pylint: disable=C0103
+__docformat__ = "restructuredtext en"
+
 import os
 import cv2
 import numpy as np
 
 from cv_aid import utils
-
-__docformat__ = "restructuredtext en"
 
 
 class Frame:  # pylint: disable=too-many-public-methods
