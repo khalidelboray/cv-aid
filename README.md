@@ -50,3 +50,35 @@ all tests are in `tests/` directory.
 
 - Basic Video Functions
 
+    ```python
+    from cv_aid import VideoStream, Frame
+    import cv2
+    import numpy as np
+
+
+    def on_frame(frame: Frame) -> Frame:
+        """
+        A function that is called when a frame is read from the video stream.
+
+        :param frame: The frame that was read.
+        :return: The frame that was read.
+        """
+        orig = frame
+        canny = frame.gray().canny(50, 100)
+        line_image = Frame(np.copy(orig.frame) * 0)
+        lines = cv2.HoughLinesP(
+            canny.frame, 1, np.pi / 180, 50, np.array([]), minLineLength=10, maxLineGap=5
+        )
+        if lines is not None:
+            for line in lines:
+                line = line[0]
+                line_image = line_image.line(
+                    (line[0], line[1]), (line[2], line[3]), (0, 255, 0), 3
+                )
+        lines_edges = cv2.addWeighted(orig.frame, 0.8, line_image.frame, 1, 1)
+        return Frame(lines_edges)
+
+
+    stream = VideoStream(src=0, on_frame=on_frame).start()
+    stream.start_window()
+    ```

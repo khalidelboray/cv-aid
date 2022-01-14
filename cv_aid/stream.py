@@ -14,7 +14,7 @@ class VideoStream:
     :param src: The source of the video stream.
     """
 
-    def __init__(self, src, width=None, height=None):
+    def __init__(self, src, width=None, height=None, on_frame=None):
         """
         Initialize the video stream and read the first frame from the stream.
 
@@ -31,12 +31,12 @@ class VideoStream:
         if width is not None and height is not None:
             self.stream.set(cv2.CAP_PROP_FRAME_WIDTH, width)
             self.stream.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
-
+        self.on_frame = on_frame
         self.frame = self.read()  # The current frame.
         self.thread = Thread(
             target=self.update, args=()
         )  # The thread that reads the video stream.
-        self.thread.daemon = True  # Make the thread a daemon thread.
+        # self.thread.daemon = True  # Make the thread a daemon thread.
         self.is_window_open = False  # Indicates if a window is open.
 
     def read(self) -> Frame:
@@ -46,7 +46,12 @@ class VideoStream:
         success, frame = self.stream.read()
         if not success:
             self.stop()
-        return Frame(frame)
+        frame = Frame(frame)
+        if self.on_frame is not None:
+            frame = self.on_frame(frame)
+            if not isinstance(frame, Frame):
+                frame = Frame(frame)
+        return frame
 
     def start(self):
         """
@@ -80,9 +85,7 @@ class VideoStream:
         Stop the video stream.
         """
         self.stopped = True
-        self.stream.release()
-        self.thread.join()
-        self.close_windows()
+        self.kill()
         return self
 
     def __del__(self):
@@ -97,28 +100,7 @@ class VideoStream:
         """
         self.stream.release()
         self.thread.join()
-
-    def is_local(self):
-        """
-        Returns True if the video stream is a local stream.
-        """
-
-        from filetype import is_video
-
-        if os.path.isfile(self.src) and is_video(self.src):
-            return True
-        # Return false if the video stream is a remote stream
-        from pydantic import AnyUrl
-        from pydantic.errors import PydanticValueError
-
-        try:
-            AnyUrl.validate(self.src)
-        except PydanticValueError:
-            return False
-        return True
-
-    def is_remote(self):
-        return not self.is_local()
+        self.close_windows()
 
     def start_window(self, title=None):
         """
