@@ -1,4 +1,5 @@
 # pydoctor --project-base-dir=. --make-html --docformat=restructuredtext cv_aid/
+import os
 import cv2
 import numpy as np
 
@@ -52,14 +53,6 @@ class Frame:  # pylint: disable=too-many-public-methods
     def channels(self) -> int:
         """Get the number of channels in the frame."""
         return self.shape[2]
-
-    def save(self, path) -> None:
-        """Save the frame to a file.
-
-        :param path: Path to the file.
-        :type path: str
-        """
-        cv2.imwrite(str(path), self.frame)
 
     def to_bytes(self) -> bytes:
         """Convert the frame to bytes.
@@ -355,3 +348,28 @@ class Frame:  # pylint: disable=too-many-public-methods
         :return: The resulting frame.
         """
         return Frame(np.abs(self.frame))
+
+    def show(self, title="Frame") -> None:
+        """Show the frame.
+
+        :param title: The title of the frame.
+        :type title: str
+        """
+        cv2.imshow(title, self.frame)
+
+    def save(self, path, name):
+        """Save the frame.
+
+        :param path: The path to save the frame.
+        :type path: str
+        :param name: The name of the frame.
+        :type name: str
+        """
+        cv2.imwrite(os.path.join(path, name), self.frame)
+
+    def __repr__(self) -> str:
+        """Get the string representation of the frame.
+
+        :return: The string representation of the frame.
+        """
+        return f"Frame({self.frame.shape})"
