@@ -7,6 +7,7 @@ import cv2
 import numpy as np
 
 from cv_aid import utils
+from cv_aid.haarcascades import Haarcascades
 
 
 class Frame:  # pylint: disable=too-many-public-methods
@@ -20,6 +21,7 @@ class Frame:  # pylint: disable=too-many-public-methods
         """
         self.frame = frame
         self.original_frame = frame.copy()
+        self._haarcascades = None
 
     @classmethod
     def load(cls, path) -> "Frame":
@@ -205,6 +207,7 @@ class Frame:  # pylint: disable=too-many-public-methods
         color,
         thickness=1,
         line_type=cv2.LINE_8,  # pylint: disable=invalid-name
+        is_max=False,
     ) -> "Frame":
         """Draw a box on the frame.
 
@@ -225,7 +228,17 @@ class Frame:  # pylint: disable=too-many-public-methods
         :return: The resulting frame.
         """
         return Frame(
-            utils.box(self.frame, x, y, width, height, color, thickness, line_type)
+            utils.box(
+                self.frame,
+                x,
+                y,
+                width,
+                height,
+                color,
+                thickness,
+                line_type,
+                is_max=is_max,
+            )
         )
 
     def lines(self, points, color, thickness=1, line_type=cv2.LINE_8) -> "Frame":
@@ -251,7 +264,9 @@ class Frame:  # pylint: disable=too-many-public-methods
             )
         )
 
-    def boxes(self, boxes, color, thickness=1, line_type=cv2.LINE_8) -> "Frame":
+    def boxes(
+        self, boxes, color, thickness=1, line_type=cv2.LINE_8, is_max=False
+    ) -> "Frame":
         """Draw boxes on the frame.
 
         :param boxes: The boxes to draw.
@@ -266,7 +281,12 @@ class Frame:  # pylint: disable=too-many-public-methods
         """
         return Frame(
             utils.boxes(
-                self.frame, boxes, color=color, thickness=thickness, line_type=line_type
+                self.frame,
+                boxes,
+                color=color,
+                thickness=thickness,
+                line_type=line_type,
+                is_max=is_max,
             )
         )
 
@@ -374,3 +394,11 @@ class Frame:  # pylint: disable=too-many-public-methods
         :return: The string representation of the frame.
         """
         return f"Frame({self.frame.shape})"
+
+    @property
+    def haarcascades(self):
+        """Provides access to the haarcascades."""
+        # Create the haarcascades class if it doesn't exist
+        if not hasattr(self, "_haarcascades") or getattr(self, "_haarcascades") is None:
+            self._haarcascades = Haarcascades()
+        return self._haarcascades
