@@ -16,9 +16,18 @@
 ## <kbd>class</kbd> `VideoStream`
 A class for streaming video from a camera. 
 
-:param src: The source of the video stream. 
 
-<a href="../cv_aid/stream.py#L18"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+**Args:**
+ 
+ - <b>`src`</b>:  The source of the video stream. 
+
+
+
+**Returns:**
+ 
+
+<a href="../cv_aid/stream.py#L21"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -35,7 +44,7 @@ Initialize the video stream and read the first frame from the stream.
 
 ---
 
-<a href="../cv_aid/stream.py#L122"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/stream.py#L116"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `close_windows`
 
@@ -49,7 +58,7 @@ close_windows()
 
 ---
 
-<a href="../cv_aid/stream.py#L98"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/stream.py#L92"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `kill`
 
@@ -73,7 +82,7 @@ Pause the video stream.
 
 ---
 
-<a href="../cv_aid/stream.py#L43"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/stream.py#L46"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `read`
 
@@ -85,7 +94,7 @@ Read a frame from the video stream and return it.
 
 ---
 
-<a href="../cv_aid/stream.py#L78"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/stream.py#L76"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `resume`
 
@@ -97,7 +106,7 @@ Resume the video stream.
 
 ---
 
-<a href="../cv_aid/stream.py#L57"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/stream.py#L58"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `start`
 
@@ -109,7 +118,7 @@ Start the video stream.
 
 ---
 
-<a href="../cv_aid/stream.py#L106"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/stream.py#L98"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `start_window`
 
@@ -119,11 +128,20 @@ start_window(title=None)
 
 Start a window to display the video stream. 
 
-:param title: The title of the window. :type title: str 
+
+
+**Args:**
+ 
+ - <b>`title`</b> (str, optional):  The title of the window. (Default value = None) 
+
+
+
+**Returns:**
+ 
 
 ---
 
-<a href="../cv_aid/stream.py#L84"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/stream.py#L80"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `stop`
 
@@ -135,7 +153,7 @@ Stop the video stream.
 
 ---
 
-<a href="../cv_aid/stream.py#L64"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/stream.py#L63"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `update`
 

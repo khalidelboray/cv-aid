@@ -69,7 +69,7 @@ Get the width of the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L366"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L401"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `abs`
 
@@ -81,9 +81,19 @@ Take the absolute value of the frame.
 
 :return: The resulting frame. 
 
+
+
+**Args:**
+ 
+
+
+
+**Returns:**
+ 
+
 ---
 
-<a href="../cv_aid/frame.py#L162"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L192"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `blur`
 
@@ -93,11 +103,20 @@ blur(ksize=5) → Frame
 
 Blur the frame. 
 
-:param ksize: The kernel size. :type ksize: int :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`ksize`</b> (int, optional):  The kernel size. (Default value = 5) 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L201"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L237"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `box`
 
@@ -107,11 +126,27 @@ box(x, y, width, height, color, thickness=1, line_type=8, is_max=False) → Fram
 
 Draw a box on the frame. 
 
-:param x: The x coordinate of the top left corner. :type x: int :param y: The y coordinate of the top left corner. :type y: int :param width: The width of the box. :type width: int :param height: The height of the box. :type height: int :param color: The color of the box. :type color: tuple :param thickness: The thickness of the box. :type thickness: int :param line_type: The type of the box. :type line_type: int :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`x`</b> (int):  The x coordinate of the top left corner. 
+ - <b>`y`</b> (int):  The y coordinate of the top left corner. 
+ - <b>`width`</b> (int):  The width of the box. 
+ - <b>`height`</b> (int):  The height of the box. 
+ - <b>`color`</b> (tuple):  The color of the box. 
+ - <b>`thickness`</b> (int, optional):  The thickness of the box. (Default value = 1) 
+ - <b>`line_type`</b> (int, optional):  The type of the box. (Default value = cv2.LINE_8) 
+ - <b>`# pylint`</b>:  disable:  (Default value = invalid-nameis_max=False) 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L267"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L301"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `boxes`
 
@@ -121,11 +156,24 @@ boxes(boxes, color, thickness=1, line_type=8, is_max=False) → Frame
 
 Draw boxes on the frame. 
 
-:param boxes: The boxes to draw. :type boxes: List[Tuple[int, int, int, int]] :param color: The color of the boxes. :type color: tuple :param thickness: The thickness of the boxes. :type thickness: int :param line_type: The type of the boxes. :type line_type: int :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`boxes`</b> (List[Tuple[int, int, int, int]]):  The boxes to draw. 
+ - <b>`color`</b> (tuple):  The color of the boxes. 
+ - <b>`thickness`</b> (int, optional):  The thickness of the boxes. (Default value = 1) 
+ - <b>`line_type`</b> (int, optional):  The type of the boxes. (Default value = cv2.LINE_8) 
+ - <b>`is_max`</b>:  Default value = False) 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L171"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L204"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `canny`
 
@@ -135,11 +183,21 @@ canny(threshold1, threshold2) → Frame
 
 Apply the Canny edge detector. 
 
-:param threshold1: The first threshold. :type threshold1: int :param threshold2: The second threshold. :type threshold2: int :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`threshold1`</b> (int):  The first threshold. 
+ - <b>`threshold2`</b> (int):  The second threshold. 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L109"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L128"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `crop`
 
@@ -149,11 +207,23 @@ crop(x, y, width, height) → Frame
 
 Crop the frame. 
 
-:param x: The x coordinate of the top left corner. :type x: int :param y: The y coordinate of the top left corner. :type y: int :param width: The width of the crop. :type width: int :param height: The height of the crop. :type height: int :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`x`</b> (int):  The x coordinate of the top left corner. 
+ - <b>`y`</b> (int):  The y coordinate of the top left corner. 
+ - <b>`width`</b> (int):  The width of the crop. 
+ - <b>`height`</b> (int):  The height of the crop. 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L135"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L156"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `crop_to_ratio`
 
@@ -163,11 +233,20 @@ crop_to_ratio(ratio) → Frame
 
 Crop the frame to a specific ratio. 
 
-:param ratio: The ratio to crop to. :type ratio: float :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`ratio`</b> (float):  The ratio to crop to. 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L153"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L180"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `crop_to_ratio_height`
 
@@ -177,11 +256,20 @@ crop_to_ratio_height(ratio) → Frame
 
 Crop the frame to a specific ratio. 
 
-:param ratio: The ratio to crop to. :type ratio: float :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`ratio`</b> (float):  The ratio to crop to. 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L144"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L168"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `crop_to_ratio_width`
 
@@ -191,11 +279,20 @@ crop_to_ratio_width(ratio) → Frame
 
 Crop the frame to a specific ratio. 
 
-:param ratio: The ratio to crop to. :type ratio: float :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`ratio`</b> (float):  The ratio to crop to. 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L124"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L143"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `crop_to_size`
 
@@ -205,11 +302,21 @@ crop_to_size(width, height) → Frame
 
 Crop the frame to a specific size. 
 
-:param width: The width of the frame. :type width: int :param height: The height of the frame. :type height: int :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`width`</b> (int):  The width of the frame. 
+ - <b>`height`</b> (int):  The height of the frame. 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L100"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L116"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `flip`
 
@@ -219,11 +326,20 @@ flip(flip_code) → Frame
 
 Flip the frame. 
 
-:param flip_code: The code for the flip. :type flip_code: int :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`flip_code`</b> (int):  The code for the flip. 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L67"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L75"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `gray`
 
@@ -235,9 +351,19 @@ Convert the frame to grayscale.
 
 :return: The resulting frame. 
 
+
+
+**Args:**
+ 
+
+
+
+**Returns:**
+ 
+
 ---
 
-<a href="../cv_aid/frame.py#L182"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L217"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `line`
 
@@ -247,11 +373,25 @@ line(start, end, color=(0, 255, 0), thickness=1, line_type=8) → Frame
 
 Draw a line on the frame. 
 
-:param start: The start of the line. :type start: tuple :param end: The end of the line. :type end: tuple :param color: The color of the line. :type color: tuple :param thickness: The thickness of the line. :type thickness: int :param line_type: The type of the line. :type line_type: int :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`start`</b> (tuple):  The start of the line. 
+ - <b>`end`</b> (tuple):  The end of the line. 
+ - <b>`color`</b> (tuple, optional):  The color of the line. (Default value = (0) 
+ - <b>`thickness`</b> (int, optional):  The thickness of the line. (Default value = 1) 
+ - <b>`line_type`</b> (int, optional):  The type of the line. (Default value = cv2.LINE_8) 
+ - <b>`255`</b>:  param 0): 0):  
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L244"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L278"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `lines`
 
@@ -261,7 +401,19 @@ lines(points, color, thickness=1, line_type=8) → Frame
 
 Draw lines on the frame. 
 
-:param points: The points to draw. :type points: List[Tuple[int, int]] :param color: The color of the lines. :type color: tuple :param thickness: The thickness of the lines. :type thickness: int :param line_type: The type of the lines. :type line_type: int :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`points`</b> (List[Tuple[int, int]]):  The points to draw. 
+ - <b>`color`</b> (tuple):  The color of the lines. 
+ - <b>`thickness`</b> (int, optional):  The thickness of the lines. (Default value = 1) 
+ - <b>`line_type`</b> (int, optional):  The type of the lines. (Default value = cv2.LINE_8) 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
@@ -275,11 +427,20 @@ load(path) → Frame
 
 Load a frame from a file. 
 
-:param path: Path to the file. :type path: str 
+
+
+**Args:**
+ 
+ - <b>`path`</b> (str):  Path to the file. 
+
+
+
+**Returns:**
+ 
 
 ---
 
-<a href="../cv_aid/frame.py#L74"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L87"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `resize`
 
@@ -289,11 +450,22 @@ resize(width=None, height=None, inter=3) → Frame
 
 Resize the frame. 
 
-:param width: The new width. :type width: int :param height: The new height. :type height: int :param inter: The interpolation method. :type inter: int :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`width`</b> (int, optional):  The new width. (Default value = None) 
+ - <b>`height`</b> (int, optional):  The new height. (Default value = None) 
+ - <b>`inter`</b> (inter: inter: int, optional):  The interpolation method. (Default value = cv2.INTER_AREA) 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L87"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L101"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `rotate`
 
@@ -303,11 +475,23 @@ rotate(angle, center=None, scale=1.0, same_dim=True) → Frame
 
 Rotate the frame. 
 
-:param angle: The angle to rotate the frame by. :type angle: float :param center: The center of rotation. :type center: tuple :param scale: The scale to apply. :type scale: float :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`angle`</b> (float):  The angle to rotate the frame by. 
+ - <b>`center`</b> (tuple, optional):  The center of rotation. (Default value = None) 
+ - <b>`scale`</b> (float, optional):  The scale to apply. (Default value = 1.0) 
+ - <b>`same_dim`</b>:  Default value = True) 
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L381"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L424"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `save`
 
@@ -317,11 +501,21 @@ save(path, name)
 
 Save the frame. 
 
-:param path: The path to save the frame. :type path: str :param name: The name of the frame. :type name: str 
+
+
+**Args:**
+ 
+ - <b>`path`</b> (str):  The path to save the frame. 
+ - <b>`name`</b> (str):  The name of the frame. 
+
+
+
+**Returns:**
+ 
 
 ---
 
-<a href="../cv_aid/frame.py#L373"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L413"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `show`
 
@@ -331,11 +525,20 @@ show(title='Frame') → None
 
 Show the frame. 
 
-:param title: The title of the frame. :type title: str 
+
+
+**Args:**
+ 
+ - <b>`title`</b> (str, optional):  The title of the frame. (Default value = "Frame") 
+
+
+
+**Returns:**
+ 
 
 ---
 
-<a href="../cv_aid/frame.py#L293"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L328"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `text`
 
@@ -352,11 +555,26 @@ text(
 
 Draw text on the frame. 
 
-:param text: The text to draw. :type text: str :param position: The position of the text. :type position: tuple :param color: The color of the text. :type color: tuple :param font_face: The font face of the text. :type font_face: int :param font_scale: The font scale of the text. :type font_scale: float :param thickness: The thickness of the text. :type thickness: int :return: The resulting frame. 
+
+
+**Args:**
+ 
+ - <b>`text`</b> (str):  The text to draw. 
+ - <b>`position`</b> (tuple):  The position of the text. 
+ - <b>`color`</b> (tuple, optional):  The color of the text. (Default value = (0) 
+ - <b>`font_face`</b> (int, optional):  The font face of the text. (Default value = cv2.FONT_HERSHEY_SIMPLEX) 
+ - <b>`font_scale`</b> (float, optional):  The font scale of the text. (Default value = 1.0) 
+ - <b>`thickness`</b> (int, optional):  The thickness of the text. (Default value = 1) 
+ - <b>`255`</b>:  param 0): 0):  
+
+
+
+**Returns:**
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L60"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/frame.py#L63"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `to_bytes`
 
@@ -367,6 +585,16 @@ to_bytes() → bytes
 Convert the frame to bytes. 
 
 :return: The resulting bytes. 
+
+
+
+**Args:**
+ 
+
+
+
+**Returns:**
+ 
 
 
 

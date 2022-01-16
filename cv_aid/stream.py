@@ -9,10 +9,13 @@ from cv_aid import Frame
 
 
 class VideoStream:
-    """
-    A class for streaming video from a camera.
+    """A class for streaming video from a camera.
 
-    :param src: The source of the video stream.
+    Args:
+      src: The source of the video stream.
+
+    Returns:
+
     """
 
     def __init__(self, src, width=None, height=None, on_frame=None):
@@ -41,9 +44,7 @@ class VideoStream:
         self.is_window_open = False  # Indicates if a window is open.
 
     def read(self) -> Frame:
-        """
-        Read a frame from the video stream and return it.
-        """
+        """Read a frame from the video stream and return it."""
         success, frame = self.stream.read()
         if not success:
             self.stop()
@@ -55,13 +56,12 @@ class VideoStream:
         return frame
 
     def start(self):
-        """
-        Start the video stream.
-        """
+        """Start the video stream."""
         self.thread.start()
         return self
 
     def update(self):
+        """ """
         while True:
             if self.stopped:
                 return
@@ -70,21 +70,15 @@ class VideoStream:
             self.frame = self.read()
 
     def pause(self):
-        """
-        Pause the video stream.
-        """
+        """Pause the video stream."""
         self.paused = True
 
     def resume(self):
-        """
-        Resume the video stream.
-        """
+        """Resume the video stream."""
         self.paused = False
 
     def stop(self):
-        """
-        Stop the video stream.
-        """
+        """Stop the video stream."""
         self.stopped = True
         self.kill()
         return self
@@ -96,19 +90,19 @@ class VideoStream:
         self.kill()
 
     def kill(self):
-        """
-        Kill the video stream.
-        """
+        """Kill the video stream."""
         self.stream.release()
         self.thread.join()
         self.close_windows()
 
     def start_window(self, title=None):
-        """
-        Start a window to display the video stream.
+        """Start a window to display the video stream.
 
-        :param title: The title of the window.
-        :type title: str
+        Args:
+          title(str, optional): The title of the window. (Default value = None)
+
+        Returns:
+
         """
         self.is_window_open = True
         if title is None:
@@ -120,5 +114,6 @@ class VideoStream:
                 break
 
     def close_windows(self):
+        """ """
         cv2.destroyAllWindows()
         self.is_window_open = False

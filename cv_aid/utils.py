@@ -13,12 +13,15 @@ from deepstack_sdk import ServerConfig
 
 
 def find_images(path: Path) -> Generator:
-    """
-    Finds all images in a directory.
+    """Finds all images in a directory.
 
-    :param path: path to the directory to search in
-    :type path: Path
-    :return: generator of all images in the directory
+    Args:
+      path(Path): path to the directory to search in
+      path: Path: 
+
+    Returns:
+      generator of all images in the directory
+
     """
     for file in path.iterdir():
         if file.is_dir():
@@ -28,12 +31,15 @@ def find_images(path: Path) -> Generator:
 
 
 def find_videos(path: Path) -> Generator:
-    """
-    Finds all videos in a directory.
+    """Finds all videos in a directory.
 
-    :param path: path to the directory to search in
-    :type path: Path
-    :return: generator of all videos in the directory
+    Args:
+      path(Path): path to the directory to search in
+      path: Path: 
+
+    Returns:
+      generator of all videos in the directory
+
     """
     for file in path.iterdir():
         if file.is_dir():
@@ -43,12 +49,15 @@ def find_videos(path: Path) -> Generator:
 
 
 def find_fonts(path: Path) -> Generator:
-    """
-    Finds all fonts in a directory.
+    """Finds all fonts in a directory.
 
-    :param path: path to the directory to search in
-    :type path: Path
-    :return: generator of all fonts in the directory
+    Args:
+      path(Path): path to the directory to search in
+      path: Path: 
+
+    Returns:
+      generator of all fonts in the directory
+
     """
     for file in path.iterdir():
         if file.is_dir():
@@ -58,20 +67,19 @@ def find_fonts(path: Path) -> Generator:
 
 
 def rotate(img: np.ndarray, angle, center=None, scale=1.0, same_dim=True) -> np.ndarray:
-    """
-    Rotates an image.
+    """Rotates an image.
 
-    :param img: image to rotate
-    :type img: np.ndarray
-    :param angle: angle to rotate the image by
-    :type angle: int
-    :param center: center of the image to rotate around
-    :type center: tuple
-    :param scale: scale of the image
-    :type scale: float
-    :param same_dim: if True, the image will be resized to the same dimensions as the original
-    :type same_dim: bool
-    :return: rotated image
+    Args:
+      img(np.ndarray): image to rotate
+      angle(int): angle to rotate the image by
+      center(tuple, optional): center of the image to rotate around (Default value = None)
+      scale(float, optional): scale of the image (Default value = 1.0)
+      same_dim(bool, optional): if True, the image will be resized to the same dimensions as the original (Default value = True)
+      img: np.ndarray: 
+
+    Returns:
+      rotated image
+
     """
 
     if not same_dim:
@@ -92,18 +100,18 @@ def rotate(img: np.ndarray, angle, center=None, scale=1.0, same_dim=True) -> np.
 
 
 def resize(img: np.ndarray, width, height, inter=cv2.INTER_AREA) -> np.ndarray:
-    """
-    Resizes an image.
+    """Resizes an image.
 
-    :param img: image to resize
-    :type img: np.ndarray
-    :param width: width of the resized image
-    :type width: int
-    :param height: height of the resized image
-    :type height: int
-    :param inter: interpolation method
-    :type inter: int
-    :return: resized image
+    Args:
+      img(np.ndarray): image to resize
+      width(int): width of the resized image
+      height(int): height of the resized image
+      inter(inter: int, optional): interpolation method (Default value = cv2.INTER_AREA)
+      img: np.ndarray: 
+
+    Returns:
+      resized image
+
     """
     if width is None:
         # calculate the ratio of the height and construct the
@@ -123,29 +131,34 @@ def resize(img: np.ndarray, width, height, inter=cv2.INTER_AREA) -> np.ndarray:
 
 
 def concatenate(image1: np.ndarray, image2: np.ndarray, axis=1) -> np.ndarray:
-    """
-    Concatenates two images.
+    """Concatenates two images.
 
-    :param image1: first image to concatenate
-    :type image1: np.ndarray
-    :param image2: second image to concatenate
-    :type image2: np.ndarray
-    :param axis: axis to concatenate the images on
-    :type axis: int
-    :return: concatenated image
+    Args:
+      image1(np.ndarray): first image to concatenate
+      image2(np.ndarray): second image to concatenate
+      axis(int, optional): axis to concatenate the images on (Default value = 1)
+      image1: np.ndarray: 
+      image2: np.ndarray: 
+
+    Returns:
+      concatenated image
+
     """
     return np.concatenate((image1, image2), axis=axis)
 
 
 def batch(iterable: Iterable, length: int) -> Generator:
-    """
-    Batches an iterable.
+    """Batches an iterable.
 
-    :param iterable: iterable to batch
-    :type iterable: Iterable
-    :param n: number of items to batch
-    :type n: int
-    :return: generator of batches
+    Args:
+      iterable(Iterable): iterable to batch
+      n(int): number of items to batch
+      iterable: Iterable: 
+      length: int: 
+
+    Returns:
+      generator of batches
+
     """
     iterator = iter(iterable)
     while item := list(itertools.islice(iterator, length)):
@@ -153,28 +166,41 @@ def batch(iterable: Iterable, length: int) -> Generator:
 
 
 def is_type(obj, type_name):
-    """
-    Checks if an object is of a certain type.
+    """Checks if an object is of a certain type.
 
-    :param obj: object to check
-    :type obj: object
-    :param type_name: name of the type to check
-    :type type_name: str
-    :return: True if the object is of the type, False otherwise
+    Args:
+      obj(object): object to check
+      type_name(str): name of the type to check
+
+    Returns:
+      True if the object is of the type, False otherwise
+
     """
     return type(obj).__name__ == type_name
 
 
 def verify_frame_type(func):
-    """
-    Verifies that the frame type is correct.
+    """Verifies that the frame type is correct.
 
-    :param func: function to decorate
-    :type func: function
-    :return: decorated function
+    Args:
+      func(function): function to decorate
+
+    Returns:
+      decorated function
+
     """
 
     def wrapper(self, frame, *args, **kwargs):
+        """
+
+        Args:
+          frame: 
+          *args: 
+          **kwargs: 
+
+        Returns:
+
+        """
         if is_type(frame, "Frame"):
             raise TypeError("The frame must be a Frame object")
         return func(self, frame, *args, **kwargs)
@@ -183,15 +209,26 @@ def verify_frame_type(func):
 
 
 def copy_frame(func):
-    """
-    Copies the frame before applying the function.
+    """Copies the frame before applying the function.
 
-    :param func: function to decorate
-    :type func: function
-    :return: decorated function
+    Args:
+      func(function): function to decorate
+
+    Returns:
+      decorated function
+
     """
 
     def wrapper(*args, **kwargs):
+        """
+
+        Args:
+          *args: 
+          **kwargs: 
+
+        Returns:
+
+        """
         frame = args[0]
         new_frame = type(frame)(frame.frame.copy())
         return func(new_frame, *args[1:], **kwargs)
@@ -200,15 +237,26 @@ def copy_frame(func):
 
 
 def verify_deepstack_config(func):
-    """
-    Verifies that the DeepStack config is correct.
+    """Verifies that the DeepStack config is correct.
 
-    :param func: function to decorate
-    :type func: function
-    :return: decorated function
+    Args:
+      func(function): function to decorate
+
+    Returns:
+      decorated function
+
     """
 
     def wrapper(self, *args, **kwargs):
+        """
+
+        Args:
+          *args: 
+          **kwargs: 
+
+        Returns:
+
+        """
         server_config = kwargs.get("config")
         if server_config is None:
             try:
@@ -229,9 +277,7 @@ def verify_deepstack_config(func):
 
 
 class TemplateResponse:
-    """
-    TemplateResponse class.
-    """
+    """TemplateResponse class."""
 
     def __init__(self, frame, loc, template):
         """
@@ -252,10 +298,14 @@ class TemplateResponse:
         self.orig = frame.copy()
 
     def draw_boxes(self) -> "TemplateResponse":
-        """
-        Draws the boxes on the frame.
-
+        """Draws the boxes on the frame.
+        
         :return: The resulting TemplateResponse object
+
+        Args:
+
+        Returns:
+
         """
         for x, y, width, height, color in self.boxes():
             self.frame = box(self.frame, x, y, width, height, color)
@@ -268,12 +318,16 @@ class TemplateResponse:
         return f"TemplateResponse({self.frame})"
 
     def boxes(self, color=(0, 255, 0)) -> Generator:
-        """
-        Returns the boxes of the template.
+        """Returns the boxes of the template.
 
-        :param color: color of the boxes
-        :type color: tuple
-        :return: generator of boxes
+        Args:
+          color(tuple, optional): color of the boxes (Default value = (0)
+          255: 
+          0): 
+
+        Returns:
+          generator of boxes
+
         """
         # for x, y in self.loc:
         # yield x, y, self.w, self.h, color
@@ -291,57 +345,66 @@ class TemplateResponse:
 
 
 def gray(frame: np.ndarray) -> np.ndarray:
-    """
-    Converts a color image to grayscale.
+    """Converts a color image to grayscale.
 
-    :param frame: image to convert to grayscale
-    :type frame: np.ndarray
-    :return: grayscale image
+    Args:
+      frame(np.ndarray): image to convert to grayscale
+      frame: np.ndarray: 
+
+    Returns:
+      grayscale image
+
     """
     return cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 
 def crop(frame: np.ndarray, x, y, width, height) -> np.ndarray:
-    """
-    Crops an image.
+    """Crops an image.
 
-    :param frame: image to crop
-    :type frame: np.ndarray
-    :param x: x coordinate of the top left corner
-    :type x: int
-    :param y: y coordinate of the top left corner
-    :type y: int
-    :param w: width of the crop
-    :type w: int
-    :param h: height of the crop
-    :type h: int
-    :return: cropped image
+    Args:
+      frame(np.ndarray): image to crop
+      x(int): x coordinate of the top left corner
+      y(int): y coordinate of the top left corner
+      w(int): width of the crop
+      h(int): height of the crop
+      frame: np.ndarray: 
+      width: 
+      height: 
+
+    Returns:
+      cropped image
+
     """
     return frame[y : y + height, x : x + width]
 
 
 def blur(frame: np.ndarray, ksize=(5, 5)) -> np.ndarray:
-    """
-    Blurs an image.
+    """Blurs an image.
 
-    :param frame: image to blur
-    :type frame: np.ndarray
-    :param ksize: size of the kernel
-    :type ksize: tuple
-    :return: blurred image
+    Args:
+      frame(np.ndarray): image to blur
+      ksize(tuple, optional): size of the kernel (Default value = (5)
+      frame: np.ndarray: 
+      5): 
+
+    Returns:
+      blurred image
+
     """
     return cv2.blur(frame, ksize=ksize)
 
 
 def flip(frame: np.ndarray, flip_code=1) -> np.ndarray:
-    """
-    Flips an image.
+    """Flips an image.
 
-    :param frame: image to flip
-    :type frame: np.ndarray
-    :param flip_code: code for flipping the image
-    :type flip_code: int
-    :return: flipped image
+    Args:
+      frame(np.ndarray): image to flip
+      flip_code(int, optional): code for flipping the image (Default value = 1)
+      frame: np.ndarray: 
+
+    Returns:
+      flipped image
+
     """
     return cv2.flip(frame, flip_code)
 
@@ -354,37 +417,41 @@ def line(
     thickness=2,
     line_type=cv2.LINE_8,
 ) -> np.ndarray:
-    """
-    Draws a line on an image.
+    """Draws a line on an image.
 
-    :param frame: image to draw the line on
-    :type frame: np.ndarray
-    :param start: start point of the line
-    :type start: tuple
-    :param end: end point of the line
-    :type end: tuple
-    :param color: color of the line
-    :type color: tuple
-    :param thickness: thickness of the line
-    :type thickness: int
-    :param line_type: type of the line
-    :type line_type: int
-    :return: image with the line
+    Args:
+      frame(np.ndarray): image to draw the line on
+      start(tuple): start point of the line
+      end(tuple): end point of the line
+      color(tuple, optional): color of the line (Default value = (0)
+      thickness(int, optional): thickness of the line (Default value = 2)
+      line_type(int, optional): type of the line (Default value = cv2.LINE_8)
+      frame: np.ndarray: 
+      start: tuple: 
+      end: tuple: 
+      255: 
+      0): 
+
+    Returns:
+      image with the line
+
     """
     return cv2.line(frame, start, end, color, thickness, line_type)
 
 
 def lines(frame, points: list, **kwargs):
-    """
-    Draws multiple lines on an image.
+    """Draws multiple lines on an image.
 
-    :param frame: image to draw the lines on
-    :type frame: np.ndarray
-    :param points: list of points to draw lines between
-    :type points: list
-    :param kwargs: keyword arguments for line
-    :type kwargs: dict
-    :return: image with the lines
+    Args:
+      frame(np.ndarray): image to draw the lines on
+      points(list): list of points to draw lines between
+      kwargs(dict): keyword arguments for line
+      points: list: 
+      **kwargs: 
+
+    Returns:
+      image with the lines
+
     """
     for i in range(len(points) - 1):
         frame = line(frame, points[i][0], points[i][1], **kwargs)
@@ -402,28 +469,29 @@ def box(
     line_type=cv2.LINE_8,
     is_max=False,  # pylint: disable=redefined-outer-name
 ) -> np.ndarray:
-    """
-    Draws a box on an image.
+    """Draws a box on an image.
 
-    :param frame: image to draw the box on
-    :type frame: np.ndarray
-    :param x: x coordinate of the top left corner
-    :type x: int
-    :param y: y coordinate of the top left corner
-    :type y: int
-    :param w: width of the box
-    :type w: int
-    :param h: height of the box
-    :type h: int
-    :param color: color of the box
-    :type color: tuple
-    :param thickness: thickness of the box
-    :type thickness: int
-    :param line_type: type of the box
-    :type line_type: int
-    :param max: if True, treat the box as a max box
-    :type max: bool
-    :return: image with the box
+    Args:
+      frame(np.ndarray): image to draw the box on
+      x(int): x coordinate of the top left corner
+      y(int): y coordinate of the top left corner
+      w(int): width of the box
+      h(int): height of the box
+      color(tuple, optional): color of the box (Default value = (0)
+      thickness(int, optional): thickness of the box (Default value = 1)
+      line_type(int, optional): type of the box (Default value = cv2.LINE_8)
+      max(bool): if True, treat the box as a max box
+      frame: np.ndarray: 
+      width: 
+      height: 
+      255: 
+      0): 
+      is_max:  (Default value = False)
+      # pylint: disable:  (Default value = redefined-outer-name)
+
+    Returns:
+      image with the box
+
     """
     if is_max:
         frame = cv2.rectangle(
@@ -437,16 +505,17 @@ def box(
 
 
 def boxes(frame, cords, **kwargs):
-    """
-    Draws multiple boxes on an image.
+    """Draws multiple boxes on an image.
 
-    :param frame: image to draw the boxes on
-    :type frame: np.ndarray
-    :param cords: list of coordinates of the boxes
-    :type cords: list
-    :param kwargs: keyword arguments for box
-    :type kwargs: dict
-    :return: image with the boxes
+    Args:
+      frame(np.ndarray): image to draw the boxes on
+      cords(list): list of coordinates of the boxes
+      kwargs(dict): keyword arguments for box
+      **kwargs: 
+
+    Returns:
+      image with the boxes
+
     """
     for _box in cords:
         frame = box(frame, *_box, **kwargs)
@@ -454,16 +523,17 @@ def boxes(frame, cords, **kwargs):
 
 
 def canny(frame: np.ndarray, threshold1=100, threshold2=200) -> np.ndarray:
-    """
-    Applies Canny edge detection to an image.
+    """Applies Canny edge detection to an image.
 
-    :param frame: image to apply Canny edge detection to
-    :type frame: np.ndarray
-    :param threshold1: first threshold for Canny edge detection
-    :type threshold1: int
-    :param threshold2: second threshold for Canny edge detection
-    :type threshold2: int
-    :return: image with the Canny edge detection applied
+    Args:
+      frame(np.ndarray): image to apply Canny edge detection to
+      threshold1(int, optional): first threshold for Canny edge detection (Default value = 100)
+      threshold2(int, optional): second threshold for Canny edge detection (Default value = 200)
+      frame: np.ndarray: 
+
+    Returns:
+      image with the Canny edge detection applied
+
     """
     return cv2.Canny(frame, threshold1, threshold2)
 
@@ -478,26 +548,27 @@ def text(
     color=(0, 255, 0),
     thickness=2,
 ) -> np.ndarray:
-    """
-    Draws text on an image.
+    """Draws text on an image.
 
-    :param frame: image to draw the text on
-    :type frame: np.ndarray
-    :param text_: text to draw
-    :type text_: str
-    :param x: x coordinate of the top left corner
-    :type x: int
-    :param y: y coordinate of the top left corner
-    :type y: int
-    :param font: font to use for the text
-    :type font: int
-    :param scale: scale of the text
-    :type scale: float
-    :param color: color of the text
-    :type color: tuple
-    :param thickness: thickness of the text
-    :type thickness: int
-    :return: image with the text
+    Args:
+      frame(np.ndarray): image to draw the text on
+      text_(str): text to draw
+      x(int): x coordinate of the top left corner
+      y(int): y coordinate of the top left corner
+      font(int, optional): font to use for the text (Default value = cv2.FONT_HERSHEY_SIMPLEX)
+      scale(float, optional): scale of the text (Default value = 0.5)
+      color(tuple, optional): color of the text (Default value = (0)
+      thickness(int, optional): thickness of the text (Default value = 2)
+      frame: np.ndarray: 
+      text_: str: 
+      x: int: 
+      y: int: 
+      255: 
+      0): 
+
+    Returns:
+      image with the text
+
     """
     return cv2.putText(frame, text_, (x, y), font, scale, color, thickness, cv2.LINE_AA)
 
@@ -511,24 +582,25 @@ def text_above_box(
     color=(0, 255, 0),
     thickness=2,
 ) -> np.ndarray:
-    """
-    Draws text above a box on an image.
+    """Draws text above a box on an image.
 
-    :param frame: image to draw the text on
-    :type frame: np.ndarray
-    :param text_: text to draw
-    :type text_: str
-    :param cords: coordinates of the box
-    :type cords: tuple
-    :param font: font to use for the text
-    :type font: int
-    :param scale: scale of the text
-    :type scale: float
-    :param color: color of the text
-    :type color: tuple
-    :param thickness: thickness of the text
-    :type thickness: int
-    :return: image with the text
+    Args:
+      frame(np.ndarray): image to draw the text on
+      text_(str): text to draw
+      cords(tuple): coordinates of the box
+      font(int, optional): font to use for the text (Default value = cv2.FONT_HERSHEY_SIMPLEX)
+      scale(float, optional): scale of the text (Default value = 0.5)
+      color(tuple, optional): color of the text (Default value = (0)
+      thickness(int, optional): thickness of the text (Default value = 2)
+      frame: np.ndarray: 
+      text_: str: 
+      cords: tuple: 
+      255: 
+      0): 
+
+    Returns:
+      image with the text
+
     """
     return text(
         frame,
@@ -543,18 +615,17 @@ def text_above_box(
 
 
 def search(frame, template, method=cv2.TM_CCOEFF_NORMED, threshold=0.8):
-    """
-    Searches for a template in an image.
+    """Searches for a template in an image.
 
-    :param frame: image to search for the template in
-    :type frame: np.ndarray
-    :param template: template to search for
-    :type template: np.ndarray
-    :param method: method to use for template matching
-    :type method: int
-    :param threshold: threshold for template matching
-    :type threshold: float
-    :return: coordinates of the template in the image
+    Args:
+      frame(np.ndarray): image to search for the template in
+      template(np.ndarray): template to search for
+      method(int, optional): method to use for template matching (Default value = cv2.TM_CCOEFF_NORMED)
+      threshold(float, optional): threshold for template matching (Default value = 0.8)
+
+    Returns:
+      coordinates of the template in the image
+
     """
     if is_type(template, "Frame"):
         template = template.frame
@@ -564,16 +635,17 @@ def search(frame, template, method=cv2.TM_CCOEFF_NORMED, threshold=0.8):
 
 
 def stack(frames: list, resize_=None, cols=2) -> np.ndarray:
-    """
-    Stacks frames into a single image.
+    """Stacks frames into a single image.
 
-    :param frames: frames to stack
-    :type frames: list
-    :param resize_: resize the frames
-    :type resize_: tuple
-    :param cols: number of columns in the stacked image
-    :type cols: int
-    :return: stacked frames
+    Args:
+      frames(list): frames to stack
+      resize_(tuple, optional): resize the frames (Default value = None)
+      cols(int, optional): number of columns in the stacked image (Default value = 2)
+      frames: list: 
+
+    Returns:
+      stacked frames
+
     """
     min_width = min([frame.shape[1] for frame in frames])
     min_height = min([frame.shape[0] for frame in frames])
@@ -617,44 +689,56 @@ def stack(frames: list, resize_=None, cols=2) -> np.ndarray:
 
 
 def to_bytes(frame: np.ndarray) -> bytes:
-    """
-    Converts a frame to bytes.
+    """Converts a frame to bytes.
 
-    :param frame: frame to convert
-    :type frame: np.ndarray
-    :return: bytes
+    Args:
+      frame(np.ndarray): frame to convert
+      frame: np.ndarray: 
+
+    Returns:
+      bytes
+
     """
     return frame.tobytes()
 
 
 def to_frame(bytes_: bytes) -> np.ndarray:
-    """
-    Converts bytes to a frame.
+    """Converts bytes to a frame.
 
-    :param bytes_: bytes to convert
-    :type bytes_: bytes
-    :return: frame
+    Args:
+      bytes_(bytes_: bytes): bytes to convert
+      bytes_: bytes: 
+
+    Returns:
+      frame
+
     """
     return np.frombuffer(bytes_, dtype=np.uint8)
 
 
 def to_base64(bytes_: bytes) -> str:
-    """
-    Converts bytes to a base64 string.
+    """Converts bytes to a base64 string.
 
-    :param bytes_: bytes to convert
-    :type bytes_: bytes
-    :return: base64 string
+    Args:
+      bytes_(bytes_: bytes): bytes to convert
+      bytes_: bytes: 
+
+    Returns:
+      base64 string
+
     """
     return base64.b64encode(bytes_).decode("utf-8")
 
 
 def from_base64(base64_: str) -> np.ndarray:
-    """
-    Converts a base64 string to bytes.
+    """Converts a base64 string to bytes.
 
-    :param base64_: base64 string to convert
-    :type base64_: str
-    :return: np.ndarray frame
+    Args:
+      base64_(str): base64 string to convert
+      base64_: str: 
+
+    Returns:
+      np.ndarray frame
+
     """
     return to_frame(base64.b64decode(base64_))

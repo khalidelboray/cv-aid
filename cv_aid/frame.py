@@ -27,8 +27,11 @@ class Frame:  # pylint: disable=too-many-public-methods
     def load(cls, path) -> "Frame":
         """Load a frame from a file.
 
-        :param path: Path to the file.
-        :type path: str
+        Args:
+          path(str): Path to the file.
+
+        Returns:
+
         """
         return cls(cv2.imread(str(path)))
 
@@ -59,123 +62,155 @@ class Frame:  # pylint: disable=too-many-public-methods
 
     def to_bytes(self) -> bytes:
         """Convert the frame to bytes.
-
+        
         :return: The resulting bytes.
+
+        Args:
+
+        Returns:
+
         """
         return self.frame.tobytes()
 
     def gray(self) -> "Frame":
         """Convert the frame to grayscale.
-
+        
         :return: The resulting frame.
+
+        Args:
+
+        Returns:
+
         """
         return Frame(utils.gray(self.frame))
 
     def resize(self, width=None, height=None, inter=cv2.INTER_AREA) -> "Frame":
         """Resize the frame.
 
-        :param width: The new width.
-        :type width: int
-        :param height: The new height.
-        :type height: int
-        :param inter: The interpolation method.
-        :type inter: int
-        :return: The resulting frame.
+        Args:
+          width(int, optional): The new width. (Default value = None)
+          height(int, optional): The new height. (Default value = None)
+          inter(inter: inter: int, optional): The interpolation method. (Default value = cv2.INTER_AREA)
+
+        Returns:
+          The resulting frame.
+
         """
         return Frame(utils.resize(self.frame, width, height, inter))
 
     def rotate(self, angle, center=None, scale=1.0, same_dim=True) -> "Frame":
         """Rotate the frame.
 
-        :param angle: The angle to rotate the frame by.
-        :type angle: float
-        :param center: The center of rotation.
-        :type center: tuple
-        :param scale: The scale to apply.
-        :type scale: float
-        :return: The resulting frame.
+        Args:
+          angle(float): The angle to rotate the frame by.
+          center(tuple, optional): The center of rotation. (Default value = None)
+          scale(float, optional): The scale to apply. (Default value = 1.0)
+          same_dim: Default value = True)
+
+        Returns:
+          The resulting frame.
+
         """
         return Frame(utils.rotate(self.frame, angle, center, scale, same_dim))
 
     def flip(self, flip_code) -> "Frame":
         """Flip the frame.
 
-        :param flip_code: The code for the flip.
-        :type flip_code: int
-        :return: The resulting frame.
+        Args:
+          flip_code(int): The code for the flip.
+
+        Returns:
+          The resulting frame.
+
         """
         return Frame(utils.flip(self.frame, flip_code))
 
     def crop(self, x, y, width, height) -> "Frame":  # pylint: disable=invalid-name
         """Crop the frame.
 
-        :param x: The x coordinate of the top left corner.
-        :type x: int
-        :param y: The y coordinate of the top left corner.
-        :type y: int
-        :param width: The width of the crop.
-        :type width: int
-        :param height: The height of the crop.
-        :type height: int
-        :return: The resulting frame.
+        Args:
+          x(int): The x coordinate of the top left corner.
+          y(int): The y coordinate of the top left corner.
+          width(int): The width of the crop.
+          height(int): The height of the crop.
+
+        Returns:
+          The resulting frame.
+
         """
         return Frame(utils.crop(self.frame, x, y, width, height))
 
     def crop_to_size(self, width, height) -> "Frame":
         """Crop the frame to a specific size.
 
-        :param width: The width of the frame.
-        :type width: int
-        :param height: The height of the frame.
-        :type height: int
-        :return: The resulting frame.
+        Args:
+          width(int): The width of the frame.
+          height(int): The height of the frame.
+
+        Returns:
+          The resulting frame.
+
         """
         return self.crop(0, 0, width, height)
 
     def crop_to_ratio(self, ratio) -> "Frame":
         """Crop the frame to a specific ratio.
 
-        :param ratio: The ratio to crop to.
-        :type ratio: float
-        :return: The resulting frame.
+        Args:
+          ratio(float): The ratio to crop to.
+
+        Returns:
+          The resulting frame.
+
         """
         return self.crop_to_size(int(self.width / ratio), int(self.height / ratio))
 
     def crop_to_ratio_width(self, ratio) -> "Frame":
         """Crop the frame to a specific ratio.
 
-        :param ratio: The ratio to crop to.
-        :type ratio: float
-        :return: The resulting frame.
+        Args:
+          ratio(float): The ratio to crop to.
+
+        Returns:
+          The resulting frame.
+
         """
         return self.crop_to_size(int(self.width / ratio), self.height)
 
     def crop_to_ratio_height(self, ratio) -> "Frame":
         """Crop the frame to a specific ratio.
 
-        :param ratio: The ratio to crop to.
-        :type ratio: float
-        :return: The resulting frame.
+        Args:
+          ratio(float): The ratio to crop to.
+
+        Returns:
+          The resulting frame.
+
         """
         return self.crop_to_size(self.width, int(self.height / ratio))
 
     def blur(self, ksize=5) -> "Frame":
         """Blur the frame.
 
-        :param ksize: The kernel size.
-        :type ksize: int
-        :return: The resulting frame.
+        Args:
+          ksize(int, optional): The kernel size. (Default value = 5)
+
+        Returns:
+          The resulting frame.
+
         """
         return Frame(utils.blur(self.frame, ksize))
 
     def canny(self, threshold1, threshold2) -> "Frame":
         """Apply the Canny edge detector.
 
-        :param threshold1: The first threshold.
-        :type threshold1: int
-        :param threshold2: The second threshold.
-        :type threshold2: int
-        :return: The resulting frame.
+        Args:
+          threshold1(int): The first threshold.
+          threshold2(int): The second threshold.
+
+        Returns:
+          The resulting frame.
+
         """
         return Frame(utils.canny(self.frame, threshold1, threshold2))
 
@@ -184,17 +219,18 @@ class Frame:  # pylint: disable=too-many-public-methods
     ) -> "Frame":
         """Draw a line on the frame.
 
-        :param start: The start of the line.
-        :type start: tuple
-        :param end: The end of the line.
-        :type end: tuple
-        :param color: The color of the line.
-        :type color: tuple
-        :param thickness: The thickness of the line.
-        :type thickness: int
-        :param line_type: The type of the line.
-        :type line_type: int
-        :return: The resulting frame.
+        Args:
+          start(tuple): The start of the line.
+          end(tuple): The end of the line.
+          color(tuple, optional): The color of the line. (Default value = (0)
+          thickness(int, optional): The thickness of the line. (Default value = 1)
+          line_type(int, optional): The type of the line. (Default value = cv2.LINE_8)
+          255: param 0):
+          0): 
+
+        Returns:
+          The resulting frame.
+
         """
         return Frame(utils.line(self.frame, start, end, color, thickness, line_type))
 
@@ -211,21 +247,19 @@ class Frame:  # pylint: disable=too-many-public-methods
     ) -> "Frame":
         """Draw a box on the frame.
 
-        :param x: The x coordinate of the top left corner.
-        :type x: int
-        :param y: The y coordinate of the top left corner.
-        :type y: int
-        :param width: The width of the box.
-        :type width: int
-        :param height: The height of the box.
-        :type height: int
-        :param color: The color of the box.
-        :type color: tuple
-        :param thickness: The thickness of the box.
-        :type thickness: int
-        :param line_type: The type of the box.
-        :type line_type: int
-        :return: The resulting frame.
+        Args:
+          x(int): The x coordinate of the top left corner.
+          y(int): The y coordinate of the top left corner.
+          width(int): The width of the box.
+          height(int): The height of the box.
+          color(tuple): The color of the box.
+          thickness(int, optional): The thickness of the box. (Default value = 1)
+          line_type(int, optional): The type of the box. (Default value = cv2.LINE_8)
+          # pylint: disable:  (Default value = invalid-nameis_max=False)
+
+        Returns:
+          The resulting frame.
+
         """
         return Frame(
             utils.box(
@@ -244,15 +278,15 @@ class Frame:  # pylint: disable=too-many-public-methods
     def lines(self, points, color, thickness=1, line_type=cv2.LINE_8) -> "Frame":
         """Draw lines on the frame.
 
-        :param points: The points to draw.
-        :type points: List[Tuple[int, int]]
-        :param color: The color of the lines.
-        :type color: tuple
-        :param thickness: The thickness of the lines.
-        :type thickness: int
-        :param line_type: The type of the lines.
-        :type line_type: int
-        :return: The resulting frame.
+        Args:
+          points(List[Tuple[int, int]]): The points to draw.
+          color(tuple): The color of the lines.
+          thickness(int, optional): The thickness of the lines. (Default value = 1)
+          line_type(int, optional): The type of the lines. (Default value = cv2.LINE_8)
+
+        Returns:
+          The resulting frame.
+
         """
         return Frame(
             utils.lines(
@@ -269,15 +303,16 @@ class Frame:  # pylint: disable=too-many-public-methods
     ) -> "Frame":
         """Draw boxes on the frame.
 
-        :param boxes: The boxes to draw.
-        :type boxes: List[Tuple[int, int, int, int]]
-        :param color: The color of the boxes.
-        :type color: tuple
-        :param thickness: The thickness of the boxes.
-        :type thickness: int
-        :param line_type: The type of the boxes.
-        :type line_type: int
-        :return: The resulting frame.
+        Args:
+          boxes(List[Tuple[int, int, int, int]]): The boxes to draw.
+          color(tuple): The color of the boxes.
+          thickness(int, optional): The thickness of the boxes. (Default value = 1)
+          line_type(int, optional): The type of the boxes. (Default value = cv2.LINE_8)
+          is_max: Default value = False)
+
+        Returns:
+          The resulting frame.
+
         """
         return Frame(
             utils.boxes(
@@ -301,19 +336,19 @@ class Frame:  # pylint: disable=too-many-public-methods
     ) -> "Frame":
         """Draw text on the frame.
 
-        :param text: The text to draw.
-        :type text: str
-        :param position: The position of the text.
-        :type position: tuple
-        :param color: The color of the text.
-        :type color: tuple
-        :param font_face: The font face of the text.
-        :type font_face: int
-        :param font_scale: The font scale of the text.
-        :type font_scale: float
-        :param thickness: The thickness of the text.
-        :type thickness: int
-        :return: The resulting frame.
+        Args:
+          text(str): The text to draw.
+          position(tuple): The position of the text.
+          color(tuple, optional): The color of the text. (Default value = (0)
+          font_face(int, optional): The font face of the text. (Default value = cv2.FONT_HERSHEY_SIMPLEX)
+          font_scale(float, optional): The font scale of the text. (Default value = 1.0)
+          thickness(int, optional): The thickness of the text. (Default value = 1)
+          255: param 0):
+          0): 
+
+        Returns:
+          The resulting frame.
+
         """
         return Frame(
             utils.text(
@@ -365,26 +400,36 @@ class Frame:  # pylint: disable=too-many-public-methods
 
     def abs(self) -> "Frame":
         """Take the absolute value of the frame.
-
+        
         :return: The resulting frame.
+
+        Args:
+
+        Returns:
+
         """
         return Frame(np.abs(self.frame))
 
     def show(self, title="Frame") -> None:
         """Show the frame.
 
-        :param title: The title of the frame.
-        :type title: str
+        Args:
+          title(str, optional): The title of the frame. (Default value = "Frame")
+
+        Returns:
+
         """
         cv2.imshow(title, self.frame)
 
     def save(self, path, name):
         """Save the frame.
 
-        :param path: The path to save the frame.
-        :type path: str
-        :param name: The name of the frame.
-        :type name: str
+        Args:
+          path(str): The path to save the frame.
+          name(str): The name of the frame.
+
+        Returns:
+
         """
         cv2.imwrite(os.path.join(path, name), self.frame)
 

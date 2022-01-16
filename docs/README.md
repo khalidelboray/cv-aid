@@ -7,14 +7,12 @@
 - [`haarcascades`](./haarcascades.md#module-haarcascades)
 - [`stream`](./stream.md#module-stream)
 - [`utils`](./utils.md#module-utils)
-- [`frame`](./frame.md)
 
 ## Classes
 
 - [`haarcascades.Haarcascades`](./haarcascades.md#class-haarcascades): Class for loading and using haarcascades.
 - [`stream.VideoStream`](./stream.md#class-videostream): A class for streaming video from a camera.
 - [`utils.TemplateResponse`](./utils.md#class-templateresponse): TemplateResponse class.
-- [`frame.Frame`](./frame.md#class-frame): A class for representing a frame.
 
 ## Functions
 

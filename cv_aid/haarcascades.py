@@ -6,9 +6,7 @@ import numpy as np
 
 
 class Haarcascades:
-    """
-    Class for loading and using haarcascades.
-    """
+    """Class for loading and using haarcascades."""
 
     def __init__(self):
         """Initializes Haarcascades."""
@@ -50,9 +48,15 @@ class Haarcascades:
     def detect_faces(self, image: np.ndarray, **kwargs):
         """Detects faces in an image.
 
-        :param image: image to detect faces in
-        :param kwargs: kwargs for detectMultiScale
-        :return: list of rectangles containing faces
+        Args:
+          image: image to detect faces in
+          kwargs: kwargs for detectMultiScale
+          image: np.ndarray: 
+          **kwargs: 
+
+        Returns:
+          list of rectangles containing faces
+
         """
         # Get faces and scores
         faces_ = self.face_cascade.detectMultiScale(image, **kwargs)
@@ -61,9 +65,15 @@ class Haarcascades:
     def detect_eyes(self, image: np.ndarray, **kwargs):
         """Detects eyes in an image.
 
-        :param image: image to detect eyes in
-        :param kwargs: kwargs for detectMultiScale
-        :return: list of rectangles containing eyes
+        Args:
+          image: image to detect eyes in
+          kwargs: kwargs for detectMultiScale
+          image: np.ndarray: 
+          **kwargs: 
+
+        Returns:
+          list of rectangles containing eyes
+
         """
         # Get eyes and scores
         eyes = self.eye_cascade.detectMultiScale(image, **kwargs)
@@ -72,9 +82,15 @@ class Haarcascades:
     def detect_smiles(self, image: np.ndarray, **kwargs):
         """Detects smiles in an image.
 
-        :param image: image to detect smiles in
-        :param kwargs: kwargs for detectMultiScale
-        :return: list of rectangles containing smiles
+        Args:
+          image: image to detect smiles in
+          kwargs: kwargs for detectMultiScale
+          image: np.ndarray: 
+          **kwargs: 
+
+        Returns:
+          list of rectangles containing smiles
+
         """
         # Get smiles and scores
         smiles = self.smile_cascade.detectMultiScale(image, **kwargs)
@@ -83,9 +99,15 @@ class Haarcascades:
     def detect_upperbody(self, image: np.ndarray, **kwargs):
         """Detects upper body in an image.
 
-        :param image: image to detect upper body in
-        :param kwargs: kwargs for detectMultiScale
-        :return: list of rectangles containing upper body
+        Args:
+          image: image to detect upper body in
+          kwargs: kwargs for detectMultiScale
+          image: np.ndarray: 
+          **kwargs: 
+
+        Returns:
+          list of rectangles containing upper body
+
         """
         # Get upper body and scores
         upper_body = self.upper_body.detectMultiScale(image, **kwargs)
@@ -94,9 +116,15 @@ class Haarcascades:
     def detect_lowerbody(self, image: np.ndarray, **kwargs):
         """Detects lower body in an image.
 
-        :param image: image to detect lower body in
-        :param kwargs: kwargs for detectMultiScale
-        :return: list of rectangles containing lower body
+        Args:
+          image: image to detect lower body in
+          kwargs: kwargs for detectMultiScale
+          image: np.ndarray: 
+          **kwargs: 
+
+        Returns:
+          list of rectangles containing lower body
+
         """
         # Get lower body and scores
         lower_body = self.lower_body.detectMultiScale(image, **kwargs)
@@ -105,9 +133,15 @@ class Haarcascades:
     def detect_fullbody(self, image: np.ndarray, **kwargs):
         """Detects full body in an image.
 
-        :param image: image to detect full body in
-        :param kwargs: kwargs for detectMultiScale
-        :return: list of rectangles containing full body
+        Args:
+          image: image to detect full body in
+          kwargs: kwargs for detectMultiScale
+          image: np.ndarray: 
+          **kwargs: 
+
+        Returns:
+          list of rectangles containing full body
+
         """
         # Get full body and scores
         full_body = self.full_body.detectMultiScale(image, **kwargs)
@@ -116,9 +150,15 @@ class Haarcascades:
     def detect_profileface(self, image: np.ndarray, **kwargs):
         """Detects profile face in an image.
 
-        :param image: image to detect profile face in
-        :param kwargs: kwargs for detectMultiScale
-        :return: list of rectangles containing profile face
+        Args:
+          image: image to detect profile face in
+          kwargs: kwargs for detectMultiScale
+          image: np.ndarray: 
+          **kwargs: 
+
+        Returns:
+          list of rectangles containing profile face
+
         """
         # Get profile face and scores
         profile_face = self.profile_face.detectMultiScale(image, **kwargs)
@@ -127,9 +167,15 @@ class Haarcascades:
     def detect_all(self, image: np.ndarray, **kwargs):
         """Detects all objects in an image.
 
-        :param image: image to detect objects in
-        :param kwargs: kwargs for detectMultiScale
-        :return: list of rectangles containing objects
+        Args:
+          image: image to detect objects in
+          kwargs: kwargs for detectMultiScale
+          image: np.ndarray: 
+          **kwargs: 
+
+        Returns:
+          list of rectangles containing objects
+
         """
         # Get all objects and scores
         faces_ = self.face_cascade.detectMultiScale(image, **kwargs)

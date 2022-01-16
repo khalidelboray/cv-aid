@@ -16,7 +16,7 @@
 ## <kbd>class</kbd> `Haarcascades`
 Class for loading and using haarcascades. 
 
-<a href="../cv_aid/haarcascades.py#L13"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/haarcascades.py#L11"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -31,7 +31,7 @@ Initializes Haarcascades.
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L127"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/haarcascades.py#L167"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_all`
 
@@ -41,11 +41,22 @@ detect_all(image: ndarray, **kwargs)
 
 Detects all objects in an image. 
 
-:param image: image to detect objects in :param kwargs: kwargs for detectMultiScale :return: list of rectangles containing objects 
+
+
+**Args:**
+ 
+ - <b>`image`</b>:  image to detect objects in 
+ - <b>`kwargs`</b>:  kwargs for detectMultiScale 
+ - <b>`image`</b>:  np.ndarray:  **kwargs:  
+
+
+
+**Returns:**
+ list of rectangles containing objects 
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L61"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/haarcascades.py#L65"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_eyes`
 
@@ -55,11 +66,22 @@ detect_eyes(image: ndarray, **kwargs)
 
 Detects eyes in an image. 
 
-:param image: image to detect eyes in :param kwargs: kwargs for detectMultiScale :return: list of rectangles containing eyes 
+
+
+**Args:**
+ 
+ - <b>`image`</b>:  image to detect eyes in 
+ - <b>`kwargs`</b>:  kwargs for detectMultiScale 
+ - <b>`image`</b>:  np.ndarray:  **kwargs:  
+
+
+
+**Returns:**
+ list of rectangles containing eyes 
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L50"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/haarcascades.py#L48"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_faces`
 
@@ -69,11 +91,22 @@ detect_faces(image: ndarray, **kwargs)
 
 Detects faces in an image. 
 
-:param image: image to detect faces in :param kwargs: kwargs for detectMultiScale :return: list of rectangles containing faces 
+
+
+**Args:**
+ 
+ - <b>`image`</b>:  image to detect faces in 
+ - <b>`kwargs`</b>:  kwargs for detectMultiScale 
+ - <b>`image`</b>:  np.ndarray:  **kwargs:  
+
+
+
+**Returns:**
+ list of rectangles containing faces 
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L105"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/haarcascades.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_fullbody`
 
@@ -83,11 +116,22 @@ detect_fullbody(image: ndarray, **kwargs)
 
 Detects full body in an image. 
 
-:param image: image to detect full body in :param kwargs: kwargs for detectMultiScale :return: list of rectangles containing full body 
+
+
+**Args:**
+ 
+ - <b>`image`</b>:  image to detect full body in 
+ - <b>`kwargs`</b>:  kwargs for detectMultiScale 
+ - <b>`image`</b>:  np.ndarray:  **kwargs:  
+
+
+
+**Returns:**
+ list of rectangles containing full body 
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L94"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/haarcascades.py#L116"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_lowerbody`
 
@@ -97,11 +141,22 @@ detect_lowerbody(image: ndarray, **kwargs)
 
 Detects lower body in an image. 
 
-:param image: image to detect lower body in :param kwargs: kwargs for detectMultiScale :return: list of rectangles containing lower body 
+
+
+**Args:**
+ 
+ - <b>`image`</b>:  image to detect lower body in 
+ - <b>`kwargs`</b>:  kwargs for detectMultiScale 
+ - <b>`image`</b>:  np.ndarray:  **kwargs:  
+
+
+
+**Returns:**
+ list of rectangles containing lower body 
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L116"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/haarcascades.py#L150"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_profileface`
 
@@ -111,11 +166,22 @@ detect_profileface(image: ndarray, **kwargs)
 
 Detects profile face in an image. 
 
-:param image: image to detect profile face in :param kwargs: kwargs for detectMultiScale :return: list of rectangles containing profile face 
+
+
+**Args:**
+ 
+ - <b>`image`</b>:  image to detect profile face in 
+ - <b>`kwargs`</b>:  kwargs for detectMultiScale 
+ - <b>`image`</b>:  np.ndarray:  **kwargs:  
+
+
+
+**Returns:**
+ list of rectangles containing profile face 
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L72"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/haarcascades.py#L82"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_smiles`
 
@@ -125,11 +191,22 @@ detect_smiles(image: ndarray, **kwargs)
 
 Detects smiles in an image. 
 
-:param image: image to detect smiles in :param kwargs: kwargs for detectMultiScale :return: list of rectangles containing smiles 
+
+
+**Args:**
+ 
+ - <b>`image`</b>:  image to detect smiles in 
+ - <b>`kwargs`</b>:  kwargs for detectMultiScale 
+ - <b>`image`</b>:  np.ndarray:  **kwargs:  
+
+
+
+**Returns:**
+ list of rectangles containing smiles 
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L83"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/haarcascades.py#L99"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_upperbody`
 
@@ -139,7 +216,18 @@ detect_upperbody(image: ndarray, **kwargs)
 
 Detects upper body in an image. 
 
-:param image: image to detect upper body in :param kwargs: kwargs for detectMultiScale :return: list of rectangles containing upper body 
+
+
+**Args:**
+ 
+ - <b>`image`</b>:  image to detect upper body in 
+ - <b>`kwargs`</b>:  kwargs for detectMultiScale 
+ - <b>`image`</b>:  np.ndarray:  **kwargs:  
+
+
+
+**Returns:**
+ list of rectangles containing upper body 
 
 
 

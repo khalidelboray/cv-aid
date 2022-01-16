@@ -20,12 +20,22 @@ find_images(path: Path) → Generator
 
 Finds all images in a directory. 
 
-:param path: path to the directory to search in :type path: Path :return: generator of all images in the directory 
+
+
+**Args:**
+ 
+ - <b>`path`</b> (Path):  path to the directory to search in 
+ - <b>`path`</b>:  Path:  
+
+
+
+**Returns:**
+ generator of all images in the directory 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L30"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `find_videos`
 
@@ -35,12 +45,22 @@ find_videos(path: Path) → Generator
 
 Finds all videos in a directory. 
 
-:param path: path to the directory to search in :type path: Path :return: generator of all videos in the directory 
+
+
+**Args:**
+ 
+ - <b>`path`</b> (Path):  path to the directory to search in 
+ - <b>`path`</b>:  Path:  
+
+
+
+**Returns:**
+ generator of all videos in the directory 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L45"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L51"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `find_fonts`
 
@@ -50,12 +70,22 @@ find_fonts(path: Path) → Generator
 
 Finds all fonts in a directory. 
 
-:param path: path to the directory to search in :type path: Path :return: generator of all fonts in the directory 
+
+
+**Args:**
+ 
+ - <b>`path`</b> (Path):  path to the directory to search in 
+ - <b>`path`</b>:  Path:  
+
+
+
+**Returns:**
+ generator of all fonts in the directory 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L60"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L69"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `rotate`
 
@@ -65,12 +95,26 @@ rotate(img: ndarray, angle, center=None, scale=1.0, same_dim=True) → ndarray
 
 Rotates an image. 
 
-:param img: image to rotate :type img: np.ndarray :param angle: angle to rotate the image by :type angle: int :param center: center of the image to rotate around :type center: tuple :param scale: scale of the image :type scale: float :param same_dim: if True, the image will be resized to the same dimensions as the original :type same_dim: bool :return: rotated image 
+
+
+**Args:**
+ 
+ - <b>`img`</b> (np.ndarray):  image to rotate 
+ - <b>`angle`</b> (int):  angle to rotate the image by 
+ - <b>`center`</b> (tuple, optional):  center of the image to rotate around (Default value = None) 
+ - <b>`scale`</b> (float, optional):  scale of the image (Default value = 1.0) 
+ - <b>`same_dim`</b> (bool, optional):  if True, the image will be resized to the same dimensions as the original (Default value = True) 
+ - <b>`img`</b>:  np.ndarray:  
+
+
+
+**Returns:**
+ rotated image 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L94"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L102"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `resize`
 
@@ -80,12 +124,25 @@ resize(img: ndarray, width, height, inter=3) → ndarray
 
 Resizes an image. 
 
-:param img: image to resize :type img: np.ndarray :param width: width of the resized image :type width: int :param height: height of the resized image :type height: int :param inter: interpolation method :type inter: int :return: resized image 
+
+
+**Args:**
+ 
+ - <b>`img`</b> (np.ndarray):  image to resize 
+ - <b>`width`</b> (int):  width of the resized image 
+ - <b>`height`</b> (int):  height of the resized image 
+ - <b>`inter`</b> (inter: int, optional):  interpolation method (Default value = cv2.INTER_AREA) 
+ - <b>`img`</b>:  np.ndarray:  
+
+
+
+**Returns:**
+ resized image 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L125"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `concatenate`
 
@@ -95,12 +152,25 @@ concatenate(image1: ndarray, image2: ndarray, axis=1) → ndarray
 
 Concatenates two images. 
 
-:param image1: first image to concatenate :type image1: np.ndarray :param image2: second image to concatenate :type image2: np.ndarray :param axis: axis to concatenate the images on :type axis: int :return: concatenated image 
+
+
+**Args:**
+ 
+ - <b>`image1`</b> (np.ndarray):  first image to concatenate 
+ - <b>`image2`</b> (np.ndarray):  second image to concatenate 
+ - <b>`axis`</b> (int, optional):  axis to concatenate the images on (Default value = 1) 
+ - <b>`image1`</b>:  np.ndarray:  
+ - <b>`image2`</b>:  np.ndarray:  
+
+
+
+**Returns:**
+ concatenated image 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L140"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L150"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `batch`
 
@@ -110,12 +180,24 @@ batch(iterable: Iterable, length: int) → Generator
 
 Batches an iterable. 
 
-:param iterable: iterable to batch :type iterable: Iterable :param n: number of items to batch :type n: int :return: generator of batches 
+
+
+**Args:**
+ 
+ - <b>`iterable`</b> (Iterable):  iterable to batch 
+ - <b>`n`</b> (int):  number of items to batch 
+ - <b>`iterable`</b>:  Iterable:  
+ - <b>`length`</b>:  int:  
+
+
+
+**Returns:**
+ generator of batches 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L155"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L168"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `is_type`
 
@@ -125,12 +207,22 @@ is_type(obj, type_name)
 
 Checks if an object is of a certain type. 
 
-:param obj: object to check :type obj: object :param type_name: name of the type to check :type type_name: str :return: True if the object is of the type, False otherwise 
+
+
+**Args:**
+ 
+ - <b>`obj`</b> (object):  object to check 
+ - <b>`type_name`</b> (str):  name of the type to check 
+
+
+
+**Returns:**
+ True if the object is of the type, False otherwise 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L168"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L182"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `verify_frame_type`
 
@@ -140,12 +232,21 @@ verify_frame_type(func)
 
 Verifies that the frame type is correct. 
 
-:param func: function to decorate :type func: function :return: decorated function 
+
+
+**Args:**
+ 
+ - <b>`func`</b> (function):  function to decorate 
+
+
+
+**Returns:**
+ decorated function 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L185"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L211"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `copy_frame`
 
@@ -155,12 +256,21 @@ copy_frame(func)
 
 Copies the frame before applying the function. 
 
-:param func: function to decorate :type func: function :return: decorated function 
+
+
+**Args:**
+ 
+ - <b>`func`</b> (function):  function to decorate 
+
+
+
+**Returns:**
+ decorated function 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L202"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L239"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `verify_deepstack_config`
 
@@ -170,12 +280,21 @@ verify_deepstack_config(func)
 
 Verifies that the DeepStack config is correct. 
 
-:param func: function to decorate :type func: function :return: decorated function 
+
+
+**Args:**
+ 
+ - <b>`func`</b> (function):  function to decorate 
+
+
+
+**Returns:**
+ decorated function 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L293"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L347"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `gray`
 
@@ -185,12 +304,22 @@ gray(frame: ndarray) → ndarray
 
 Converts a color image to grayscale. 
 
-:param frame: image to convert to grayscale :type frame: np.ndarray :return: grayscale image 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to convert to grayscale 
+ - <b>`frame`</b>:  np.ndarray:  
+
+
+
+**Returns:**
+ grayscale image 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L304"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L361"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `crop`
 
@@ -200,12 +329,26 @@ crop(frame: ndarray, x, y, width, height) → ndarray
 
 Crops an image. 
 
-:param frame: image to crop :type frame: np.ndarray :param x: x coordinate of the top left corner :type x: int :param y: y coordinate of the top left corner :type y: int :param w: width of the crop :type w: int :param h: height of the crop :type h: int :return: cropped image 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to crop 
+ - <b>`x`</b> (int):  x coordinate of the top left corner 
+ - <b>`y`</b> (int):  y coordinate of the top left corner 
+ - <b>`w`</b> (int):  width of the crop 
+ - <b>`h`</b> (int):  height of the crop 
+ - <b>`frame`</b>:  np.ndarray:  width:  height:  
+
+
+
+**Returns:**
+ cropped image 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L323"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L381"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `blur`
 
@@ -215,12 +358,23 @@ blur(frame: ndarray, ksize=(5, 5)) → ndarray
 
 Blurs an image. 
 
-:param frame: image to blur :type frame: np.ndarray :param ksize: size of the kernel :type ksize: tuple :return: blurred image 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to blur 
+ - <b>`ksize`</b> (tuple, optional):  size of the kernel (Default value = (5) 
+ - <b>`frame`</b>:  np.ndarray:  5):  
+
+
+
+**Returns:**
+ blurred image 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L336"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L397"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `flip`
 
@@ -230,12 +384,23 @@ flip(frame: ndarray, flip_code=1) → ndarray
 
 Flips an image. 
 
-:param frame: image to flip :type frame: np.ndarray :param flip_code: code for flipping the image :type flip_code: int :return: flipped image 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to flip 
+ - <b>`flip_code`</b> (int, optional):  code for flipping the image (Default value = 1) 
+ - <b>`frame`</b>:  np.ndarray:  
+
+
+
+**Returns:**
+ flipped image 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L349"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L412"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `line`
 
@@ -252,12 +417,29 @@ line(
 
 Draws a line on an image. 
 
-:param frame: image to draw the line on :type frame: np.ndarray :param start: start point of the line :type start: tuple :param end: end point of the line :type end: tuple :param color: color of the line :type color: tuple :param thickness: thickness of the line :type thickness: int :param line_type: type of the line :type line_type: int :return: image with the line 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to draw the line on 
+ - <b>`start`</b> (tuple):  start point of the line 
+ - <b>`end`</b> (tuple):  end point of the line 
+ - <b>`color`</b> (tuple, optional):  color of the line (Default value = (0) 
+ - <b>`thickness`</b> (int, optional):  thickness of the line (Default value = 2) 
+ - <b>`line_type`</b> (int, optional):  type of the line (Default value = cv2.LINE_8) 
+ - <b>`frame`</b>:  np.ndarray:  
+ - <b>`start`</b>:  tuple:  
+ - <b>`end`</b>:  tuple:  255:  0):  
+
+
+
+**Returns:**
+ image with the line 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L377"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L442"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `lines`
 
@@ -267,12 +449,24 @@ lines(frame, points: list, **kwargs)
 
 Draws multiple lines on an image. 
 
-:param frame: image to draw the lines on :type frame: np.ndarray :param points: list of points to draw lines between :type points: list :param kwargs: keyword arguments for line :type kwargs: dict :return: image with the lines 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to draw the lines on 
+ - <b>`points`</b> (list):  list of points to draw lines between 
+ - <b>`kwargs`</b> (dict):  keyword arguments for line 
+ - <b>`points`</b>:  list:  **kwargs:  
+
+
+
+**Returns:**
+ image with the lines 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L394"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L461"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `box`
 
@@ -292,12 +486,32 @@ box(
 
 Draws a box on an image. 
 
-:param frame: image to draw the box on :type frame: np.ndarray :param x: x coordinate of the top left corner :type x: int :param y: y coordinate of the top left corner :type y: int :param w: width of the box :type w: int :param h: height of the box :type h: int :param color: color of the box :type color: tuple :param thickness: thickness of the box :type thickness: int :param line_type: type of the box :type line_type: int :param max: if True, treat the box as a max box :type max: bool :return: image with the box 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to draw the box on 
+ - <b>`x`</b> (int):  x coordinate of the top left corner 
+ - <b>`y`</b> (int):  y coordinate of the top left corner 
+ - <b>`w`</b> (int):  width of the box 
+ - <b>`h`</b> (int):  height of the box 
+ - <b>`color`</b> (tuple, optional):  color of the box (Default value = (0) 
+ - <b>`thickness`</b> (int, optional):  thickness of the box (Default value = 1) 
+ - <b>`line_type`</b> (int, optional):  type of the box (Default value = cv2.LINE_8) 
+ - <b>`max`</b> (bool):  if True, treat the box as a max box 
+ - <b>`frame`</b>:  np.ndarray:  width:  height:  255:  0):  
+ - <b>`is_max`</b>:   (Default value = False) 
+ - <b>`# pylint`</b>:  disable:  (Default value = redefined-outer-name) 
+
+
+
+**Returns:**
+ image with the box 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L439"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L507"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `boxes`
 
@@ -307,12 +521,23 @@ boxes(frame, cords, **kwargs)
 
 Draws multiple boxes on an image. 
 
-:param frame: image to draw the boxes on :type frame: np.ndarray :param cords: list of coordinates of the boxes :type cords: list :param kwargs: keyword arguments for box :type kwargs: dict :return: image with the boxes 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to draw the boxes on 
+ - <b>`cords`</b> (list):  list of coordinates of the boxes 
+ - <b>`kwargs`</b> (dict):  keyword arguments for box **kwargs:  
+
+
+
+**Returns:**
+ image with the boxes 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L456"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L525"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `canny`
 
@@ -322,12 +547,24 @@ canny(frame: ndarray, threshold1=100, threshold2=200) → ndarray
 
 Applies Canny edge detection to an image. 
 
-:param frame: image to apply Canny edge detection to :type frame: np.ndarray :param threshold1: first threshold for Canny edge detection :type threshold1: int :param threshold2: second threshold for Canny edge detection :type threshold2: int :return: image with the Canny edge detection applied 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to apply Canny edge detection to 
+ - <b>`threshold1`</b> (int, optional):  first threshold for Canny edge detection (Default value = 100) 
+ - <b>`threshold2`</b> (int, optional):  second threshold for Canny edge detection (Default value = 200) 
+ - <b>`frame`</b>:  np.ndarray:  
+
+
+
+**Returns:**
+ image with the Canny edge detection applied 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L471"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L541"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `text`
 
@@ -346,12 +583,32 @@ text(
 
 Draws text on an image. 
 
-:param frame: image to draw the text on :type frame: np.ndarray :param text_: text to draw :type text_: str :param x: x coordinate of the top left corner :type x: int :param y: y coordinate of the top left corner :type y: int :param font: font to use for the text :type font: int :param scale: scale of the text :type scale: float :param color: color of the text :type color: tuple :param thickness: thickness of the text :type thickness: int :return: image with the text 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to draw the text on 
+ - <b>`text_`</b> (str):  text to draw 
+ - <b>`x`</b> (int):  x coordinate of the top left corner 
+ - <b>`y`</b> (int):  y coordinate of the top left corner 
+ - <b>`font`</b> (int, optional):  font to use for the text (Default value = cv2.FONT_HERSHEY_SIMPLEX) 
+ - <b>`scale`</b> (float, optional):  scale of the text (Default value = 0.5) 
+ - <b>`color`</b> (tuple, optional):  color of the text (Default value = (0) 
+ - <b>`thickness`</b> (int, optional):  thickness of the text (Default value = 2) 
+ - <b>`frame`</b>:  np.ndarray:  
+ - <b>`text_`</b>:  str:  
+ - <b>`x`</b>:  int:  
+ - <b>`y`</b>:  int:  255:  0):  
+
+
+
+**Returns:**
+ image with the text 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L505"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L576"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `text_above_box`
 
@@ -369,12 +626,30 @@ text_above_box(
 
 Draws text above a box on an image. 
 
-:param frame: image to draw the text on :type frame: np.ndarray :param text_: text to draw :type text_: str :param cords: coordinates of the box :type cords: tuple :param font: font to use for the text :type font: int :param scale: scale of the text :type scale: float :param color: color of the text :type color: tuple :param thickness: thickness of the text :type thickness: int :return: image with the text 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to draw the text on 
+ - <b>`text_`</b> (str):  text to draw 
+ - <b>`cords`</b> (tuple):  coordinates of the box 
+ - <b>`font`</b> (int, optional):  font to use for the text (Default value = cv2.FONT_HERSHEY_SIMPLEX) 
+ - <b>`scale`</b> (float, optional):  scale of the text (Default value = 0.5) 
+ - <b>`color`</b> (tuple, optional):  color of the text (Default value = (0) 
+ - <b>`thickness`</b> (int, optional):  thickness of the text (Default value = 2) 
+ - <b>`frame`</b>:  np.ndarray:  
+ - <b>`text_`</b>:  str:  
+ - <b>`cords`</b>:  tuple:  255:  0):  
+
+
+
+**Returns:**
+ image with the text 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L545"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L617"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `search`
 
@@ -384,12 +659,24 @@ search(frame, template, method=5, threshold=0.8)
 
 Searches for a template in an image. 
 
-:param frame: image to search for the template in :type frame: np.ndarray :param template: template to search for :type template: np.ndarray :param method: method to use for template matching :type method: int :param threshold: threshold for template matching :type threshold: float :return: coordinates of the template in the image 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to search for the template in 
+ - <b>`template`</b> (np.ndarray):  template to search for 
+ - <b>`method`</b> (int, optional):  method to use for template matching (Default value = cv2.TM_CCOEFF_NORMED) 
+ - <b>`threshold`</b> (float, optional):  threshold for template matching (Default value = 0.8) 
+
+
+
+**Returns:**
+ coordinates of the template in the image 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L566"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L637"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `stack`
 
@@ -399,12 +686,24 @@ stack(frames: list, resize_=None, cols=2) → ndarray
 
 Stacks frames into a single image. 
 
-:param frames: frames to stack :type frames: list :param resize_: resize the frames :type resize_: tuple :param cols: number of columns in the stacked image :type cols: int :return: stacked frames 
+
+
+**Args:**
+ 
+ - <b>`frames`</b> (list):  frames to stack 
+ - <b>`resize_`</b> (tuple, optional):  resize the frames (Default value = None) 
+ - <b>`cols`</b> (int, optional):  number of columns in the stacked image (Default value = 2) 
+ - <b>`frames`</b>:  list:  
+
+
+
+**Returns:**
+ stacked frames 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L619"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L691"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `to_bytes`
 
@@ -414,12 +713,22 @@ to_bytes(frame: ndarray) → bytes
 
 Converts a frame to bytes. 
 
-:param frame: frame to convert :type frame: np.ndarray :return: bytes 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  frame to convert 
+ - <b>`frame`</b>:  np.ndarray:  
+
+
+
+**Returns:**
+ bytes 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L630"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L705"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `to_frame`
 
@@ -429,12 +738,22 @@ to_frame(bytes_: bytes) → ndarray
 
 Converts bytes to a frame. 
 
-:param bytes_: bytes to convert :type bytes_: bytes :return: frame 
+
+
+**Args:**
+ 
+ - <b>`bytes_`</b> (bytes_: bytes):  bytes to convert 
+ - <b>`bytes_`</b>:  bytes:  
+
+
+
+**Returns:**
+ frame 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L641"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L719"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `to_base64`
 
@@ -444,12 +763,22 @@ to_base64(bytes_: bytes) → str
 
 Converts bytes to a base64 string. 
 
-:param bytes_: bytes to convert :type bytes_: bytes :return: base64 string 
+
+
+**Args:**
+ 
+ - <b>`bytes_`</b> (bytes_: bytes):  bytes to convert 
+ - <b>`bytes_`</b>:  bytes:  
+
+
+
+**Returns:**
+ base64 string 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L652"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L733"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `from_base64`
 
@@ -459,17 +788,27 @@ from_base64(base64_: str) → ndarray
 
 Converts a base64 string to bytes. 
 
-:param base64_: base64 string to convert :type base64_: str :return: np.ndarray frame 
+
+
+**Args:**
+ 
+ - <b>`base64_`</b> (str):  base64 string to convert 
+ - <b>`base64_`</b>:  str:  
+
+
+
+**Returns:**
+ np.ndarray frame 
 
 
 ---
 
-<a href="../cv_aid/utils.py#L231"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L279"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `TemplateResponse`
 TemplateResponse class. 
 
-<a href="../cv_aid/utils.py#L236"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L282"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -486,7 +825,7 @@ Initializes the TemplateResponse class.
 
 ---
 
-<a href="../cv_aid/utils.py#L270"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L320"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `boxes`
 
@@ -496,11 +835,20 @@ boxes(color=(0, 255, 0)) → Generator
 
 Returns the boxes of the template. 
 
-:param color: color of the boxes :type color: tuple :return: generator of boxes 
+
+
+**Args:**
+ 
+ - <b>`color`</b> (tuple, optional):  color of the boxes (Default value = (0) 255:  0):  
+
+
+
+**Returns:**
+ generator of boxes 
 
 ---
 
-<a href="../cv_aid/utils.py#L254"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="../cv_aid/utils.py#L300"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `draw_boxes`
 
@@ -511,6 +859,16 @@ draw_boxes() → TemplateResponse
 Draws the boxes on the frame. 
 
 :return: The resulting TemplateResponse object 
+
+
+
+**Args:**
+ 
+
+
+
+**Returns:**
+ 
 
 
 
