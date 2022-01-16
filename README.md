@@ -113,7 +113,7 @@ all tests are in `tests/` directory.
 
     *Output Demo:*
 
-    ![haarcascade Window](https://raw.githubusercontent.com/khalidelboray/cv-aid/master/images/haarcascade.png)
+    ![haarcascade Window](https://raw.githubusercontent.com/khalidelboray/cv-aid/master/images/haarcascades.png)
 
 - Tourch Hub (Yolov5)
 
