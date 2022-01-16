@@ -1,6 +1,7 @@
 # pylint: disable=C0103
 __docformat__ = "restructuredtext en"
 
+import base64
 import itertools
 from pathlib import Path
 from typing import Generator, Iterable
@@ -613,3 +614,47 @@ def stack(frames: list, resize_=None, cols=2) -> np.ndarray:
             ] = 255
 
     return stacked
+
+
+def to_bytes(frame: np.ndarray) -> bytes:
+    """
+    Converts a frame to bytes.
+
+    :param frame: frame to convert
+    :type frame: np.ndarray
+    :return: bytes
+    """
+    return frame.tobytes()
+
+
+def to_frame(bytes_: bytes) -> np.ndarray:
+    """
+    Converts bytes to a frame.
+
+    :param bytes_: bytes to convert
+    :type bytes_: bytes
+    :return: frame
+    """
+    return np.frombuffer(bytes_, dtype=np.uint8)
+
+
+def to_base64(bytes_: bytes) -> str:
+    """
+    Converts bytes to a base64 string.
+
+    :param bytes_: bytes to convert
+    :type bytes_: bytes
+    :return: base64 string
+    """
+    return base64.b64encode(bytes_).decode("utf-8")
+
+
+def from_base64(base64_: str) -> np.ndarray:
+    """
+    Converts a base64 string to bytes.
+
+    :param base64_: base64 string to convert
+    :type base64_: str
+    :return: np.ndarray frame
+    """
+    return to_frame(base64.b64decode(base64_))
