@@ -1,4 +1,5 @@
 # cv-aid
+
 CV Aid is a set of helpers of computer vision tasks.
 
 ## Installation
@@ -85,4 +86,6 @@ all tests are in `tests/` directory.
 
     *Output Demo:*
 
-    ![Code Window](/images/stream.png)
+    ![Code Window](https://raw.githubusercontent.com/khalidelboray/cv-aid/master/images/stream.png)
+
+    ![torch yolov5](https://raw.githubusercontent.com/khalidelboray/cv-aid/master/images/torch_yolo.png)
