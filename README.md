@@ -88,4 +88,58 @@ all tests are in `tests/` directory.
 
     ![Code Window](https://raw.githubusercontent.com/khalidelboray/cv-aid/master/images/stream.png)
 
+- Haar Cascade Functions
+
+    ```python
+    from cv_aid import VideoStream, Frame
+
+    def on_frame(frame: Frame) -> Frame:
+        """
+        A function that is called when a frame is read from the video stream.
+
+        :param frame: The frame that was read.
+        :return: The frame that was read.
+        """
+        boxes = frame.haarcascades.detect_faces(frame.frame, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+        frame = frame.boxes(boxes, color=(0, 255, 0))
+        return frame
+
+
+    if __name__ == "__main__":
+
+        stream = VideoStream(src=0, on_frame=on_frame).start()
+        stream.start_window()
+    ```
+
+    *Output Demo:*
+
+    ![haarcascade Window](https://raw.githubusercontent.com/khalidelboray/cv-aid/master/images/haarcascade.png)
+
+- Tourch Hub (Yolov5)
+
+    ```python
+    from cv_aid import VideoStream, Frame
+    import torch
+
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
+
+    def on_frame(frame: Frame) -> Frame:
+        """
+        A function that is called when a frame is read from the video stream.
+
+        :param frame: The frame that was read.
+        :return: The frame that was read.
+        """
+        results = model(frame.frame)
+        results.display(render=True)
+        frame = Frame(results.imgs[0])    
+        return frame
+
+
+    if __name__ == "__main__":
+        
+        stream = VideoStream(src=0, on_frame=on_frame).start()
+        stream.start_window()
+    ```
+
     ![torch yolov5](https://raw.githubusercontent.com/khalidelboray/cv-aid/master/images/torch_yolo.png)
