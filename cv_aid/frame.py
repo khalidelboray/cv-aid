@@ -8,6 +8,9 @@ import numpy as np
 
 from cv_aid import utils
 from cv_aid.haarcascades import Haarcascades
+from cv_aid._dlib import Dlib
+
+_dlib = Dlib()
 
 
 class Frame:  # pylint: disable=too-many-public-methods
@@ -22,6 +25,7 @@ class Frame:  # pylint: disable=too-many-public-methods
         self.frame = frame
         self.original_frame = frame.copy()
         self._haarcascades = None
+        self._dlib = None
 
     @classmethod
     def load(cls, path) -> "Frame":
@@ -62,7 +66,7 @@ class Frame:  # pylint: disable=too-many-public-methods
 
     def to_bytes(self) -> bytes:
         """Convert the frame to bytes.
-        
+
         :return: The resulting bytes.
 
         Args:
@@ -74,7 +78,7 @@ class Frame:  # pylint: disable=too-many-public-methods
 
     def gray(self) -> "Frame":
         """Convert the frame to grayscale.
-        
+
         :return: The resulting frame.
 
         Args:
@@ -226,13 +230,33 @@ class Frame:  # pylint: disable=too-many-public-methods
           thickness(int, optional): The thickness of the line. (Default value = 1)
           line_type(int, optional): The type of the line. (Default value = cv2.LINE_8)
           255: param 0):
-          0): 
+          0):
 
         Returns:
           The resulting frame.
 
         """
         return Frame(utils.line(self.frame, start, end, color, thickness, line_type))
+
+    def circle(
+        self, center, radius, color=(0, 255, 0), thickness=1, line_type=cv2.LINE_8
+    ) -> "Frame":
+        """Draw a circle on the frame.
+
+        Args:
+          center(tuple): The center of the circle.
+          radius(int): The radius of the circle.
+          color(tuple, optional): The color of the circle. (Default value = (0)
+          thickness(int, optional): The thickness of the circle. (Default value = 1)
+          line_type(int, optional): The type of the circle. (Default value = cv2.LINE_8)
+
+        Returns:
+          The resulting frame.
+
+        """
+        return Frame(
+            utils.circle(self.frame, center, radius, color, thickness, line_type)
+        )
 
     def box(
         self,
@@ -344,7 +368,7 @@ class Frame:  # pylint: disable=too-many-public-methods
           font_scale(float, optional): The font scale of the text. (Default value = 1.0)
           thickness(int, optional): The thickness of the text. (Default value = 1)
           255: param 0):
-          0): 
+          0):
 
         Returns:
           The resulting frame.
@@ -400,7 +424,7 @@ class Frame:  # pylint: disable=too-many-public-methods
 
     def abs(self) -> "Frame":
         """Take the absolute value of the frame.
-        
+
         :return: The resulting frame.
 
         Args:
@@ -447,3 +471,11 @@ class Frame:  # pylint: disable=too-many-public-methods
         if not hasattr(self, "_haarcascades") or getattr(self, "_haarcascades") is None:
             self._haarcascades = Haarcascades()
         return self._haarcascades
+
+    @property
+    def dlib(self):
+        """Provides access to the dlib."""
+        # Create the dlib class if it doesn't exist
+        if not hasattr(self, "_dlib") or getattr(self, "_dlib") is None:
+            self._dlib = _dlib
+        return self._dlib

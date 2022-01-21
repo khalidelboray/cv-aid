@@ -51,8 +51,8 @@ class Haarcascades:
         Args:
           image: image to detect faces in
           kwargs: kwargs for detectMultiScale
-          image: np.ndarray: 
-          **kwargs: 
+          image: np.ndarray:
+          **kwargs:
 
         Returns:
           list of rectangles containing faces
@@ -68,8 +68,8 @@ class Haarcascades:
         Args:
           image: image to detect eyes in
           kwargs: kwargs for detectMultiScale
-          image: np.ndarray: 
-          **kwargs: 
+          image: np.ndarray:
+          **kwargs:
 
         Returns:
           list of rectangles containing eyes
@@ -85,8 +85,8 @@ class Haarcascades:
         Args:
           image: image to detect smiles in
           kwargs: kwargs for detectMultiScale
-          image: np.ndarray: 
-          **kwargs: 
+          image: np.ndarray:
+          **kwargs:
 
         Returns:
           list of rectangles containing smiles
@@ -102,8 +102,8 @@ class Haarcascades:
         Args:
           image: image to detect upper body in
           kwargs: kwargs for detectMultiScale
-          image: np.ndarray: 
-          **kwargs: 
+          image: np.ndarray:
+          **kwargs:
 
         Returns:
           list of rectangles containing upper body
@@ -119,8 +119,8 @@ class Haarcascades:
         Args:
           image: image to detect lower body in
           kwargs: kwargs for detectMultiScale
-          image: np.ndarray: 
-          **kwargs: 
+          image: np.ndarray:
+          **kwargs:
 
         Returns:
           list of rectangles containing lower body
@@ -136,8 +136,8 @@ class Haarcascades:
         Args:
           image: image to detect full body in
           kwargs: kwargs for detectMultiScale
-          image: np.ndarray: 
-          **kwargs: 
+          image: np.ndarray:
+          **kwargs:
 
         Returns:
           list of rectangles containing full body
@@ -153,8 +153,8 @@ class Haarcascades:
         Args:
           image: image to detect profile face in
           kwargs: kwargs for detectMultiScale
-          image: np.ndarray: 
-          **kwargs: 
+          image: np.ndarray:
+          **kwargs:
 
         Returns:
           list of rectangles containing profile face
@@ -170,8 +170,8 @@ class Haarcascades:
         Args:
           image: image to detect objects in
           kwargs: kwargs for detectMultiScale
-          image: np.ndarray: 
-          **kwargs: 
+          image: np.ndarray:
+          **kwargs:
 
         Returns:
           list of rectangles containing objects

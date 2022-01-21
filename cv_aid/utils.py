@@ -17,7 +17,7 @@ def find_images(path: Path) -> Generator:
 
     Args:
       path(Path): path to the directory to search in
-      path: Path: 
+      path: Path:
 
     Returns:
       generator of all images in the directory
@@ -35,7 +35,7 @@ def find_videos(path: Path) -> Generator:
 
     Args:
       path(Path): path to the directory to search in
-      path: Path: 
+      path: Path:
 
     Returns:
       generator of all videos in the directory
@@ -53,7 +53,7 @@ def find_fonts(path: Path) -> Generator:
 
     Args:
       path(Path): path to the directory to search in
-      path: Path: 
+      path: Path:
 
     Returns:
       generator of all fonts in the directory
@@ -75,7 +75,7 @@ def rotate(img: np.ndarray, angle, center=None, scale=1.0, same_dim=True) -> np.
       center(tuple, optional): center of the image to rotate around (Default value = None)
       scale(float, optional): scale of the image (Default value = 1.0)
       same_dim(bool, optional): if True, the image will be resized to the same dimensions as the original (Default value = True)
-      img: np.ndarray: 
+      img: np.ndarray:
 
     Returns:
       rotated image
@@ -107,7 +107,7 @@ def resize(img: np.ndarray, width, height, inter=cv2.INTER_AREA) -> np.ndarray:
       width(int): width of the resized image
       height(int): height of the resized image
       inter(inter: int, optional): interpolation method (Default value = cv2.INTER_AREA)
-      img: np.ndarray: 
+      img: np.ndarray:
 
     Returns:
       resized image
@@ -137,8 +137,8 @@ def concatenate(image1: np.ndarray, image2: np.ndarray, axis=1) -> np.ndarray:
       image1(np.ndarray): first image to concatenate
       image2(np.ndarray): second image to concatenate
       axis(int, optional): axis to concatenate the images on (Default value = 1)
-      image1: np.ndarray: 
-      image2: np.ndarray: 
+      image1: np.ndarray:
+      image2: np.ndarray:
 
     Returns:
       concatenated image
@@ -153,8 +153,8 @@ def batch(iterable: Iterable, length: int) -> Generator:
     Args:
       iterable(Iterable): iterable to batch
       n(int): number of items to batch
-      iterable: Iterable: 
-      length: int: 
+      iterable: Iterable:
+      length: int:
 
     Returns:
       generator of batches
@@ -194,9 +194,9 @@ def verify_frame_type(func):
         """
 
         Args:
-          frame: 
-          *args: 
-          **kwargs: 
+          frame:
+          *args:
+          **kwargs:
 
         Returns:
 
@@ -223,8 +223,8 @@ def copy_frame(func):
         """
 
         Args:
-          *args: 
-          **kwargs: 
+          *args:
+          **kwargs:
 
         Returns:
 
@@ -251,8 +251,8 @@ def verify_deepstack_config(func):
         """
 
         Args:
-          *args: 
-          **kwargs: 
+          *args:
+          **kwargs:
 
         Returns:
 
@@ -299,7 +299,7 @@ class TemplateResponse:
 
     def draw_boxes(self) -> "TemplateResponse":
         """Draws the boxes on the frame.
-        
+
         :return: The resulting TemplateResponse object
 
         Args:
@@ -322,8 +322,8 @@ class TemplateResponse:
 
         Args:
           color(tuple, optional): color of the boxes (Default value = (0)
-          255: 
-          0): 
+          255:
+          0):
 
         Returns:
           generator of boxes
@@ -349,7 +349,7 @@ def gray(frame: np.ndarray) -> np.ndarray:
 
     Args:
       frame(np.ndarray): image to convert to grayscale
-      frame: np.ndarray: 
+      frame: np.ndarray:
 
     Returns:
       grayscale image
@@ -367,9 +367,9 @@ def crop(frame: np.ndarray, x, y, width, height) -> np.ndarray:
       y(int): y coordinate of the top left corner
       w(int): width of the crop
       h(int): height of the crop
-      frame: np.ndarray: 
-      width: 
-      height: 
+      frame: np.ndarray:
+      width:
+      height:
 
     Returns:
       cropped image
@@ -384,8 +384,8 @@ def blur(frame: np.ndarray, ksize=(5, 5)) -> np.ndarray:
     Args:
       frame(np.ndarray): image to blur
       ksize(tuple, optional): size of the kernel (Default value = (5)
-      frame: np.ndarray: 
-      5): 
+      frame: np.ndarray:
+      5):
 
     Returns:
       blurred image
@@ -400,7 +400,7 @@ def flip(frame: np.ndarray, flip_code=1) -> np.ndarray:
     Args:
       frame(np.ndarray): image to flip
       flip_code(int, optional): code for flipping the image (Default value = 1)
-      frame: np.ndarray: 
+      frame: np.ndarray:
 
     Returns:
       flipped image
@@ -426,11 +426,11 @@ def line(
       color(tuple, optional): color of the line (Default value = (0)
       thickness(int, optional): thickness of the line (Default value = 2)
       line_type(int, optional): type of the line (Default value = cv2.LINE_8)
-      frame: np.ndarray: 
-      start: tuple: 
-      end: tuple: 
-      255: 
-      0): 
+      frame: np.ndarray:
+      start: tuple:
+      end: tuple:
+      255:
+      0):
 
     Returns:
       image with the line
@@ -446,8 +446,8 @@ def lines(frame, points: list, **kwargs):
       frame(np.ndarray): image to draw the lines on
       points(list): list of points to draw lines between
       kwargs(dict): keyword arguments for line
-      points: list: 
-      **kwargs: 
+      points: list:
+      **kwargs:
 
     Returns:
       image with the lines
@@ -456,6 +456,31 @@ def lines(frame, points: list, **kwargs):
     for i in range(len(points) - 1):
         frame = line(frame, points[i][0], points[i][1], **kwargs)
     return frame
+
+
+def circle(
+    frame: np.ndarray,
+    center: tuple,
+    radius: int,
+    color=(0, 255, 0),
+    thickness=2,
+    lineType=cv2.LINE_8,
+) -> np.ndarray:
+    """Draws a circle on an image.
+
+    Args:
+      frame(np.ndarray): image to draw the circle on
+      center(tuple): center of the circle
+      radius(int): radius of the circle
+      color(tuple, optional): color of the circle (Default value = (0)
+      thickness(int, optional): thickness of the circle (Default value = 2)
+      lineType(int, optional): type of the circle (Default value = cv2.LINE_8)
+
+    Returns:
+      image with the circle
+
+    """
+    return cv2.circle(frame, center, radius, color, thickness, lineType)
 
 
 def box(
@@ -481,11 +506,11 @@ def box(
       thickness(int, optional): thickness of the box (Default value = 1)
       line_type(int, optional): type of the box (Default value = cv2.LINE_8)
       max(bool): if True, treat the box as a max box
-      frame: np.ndarray: 
-      width: 
-      height: 
-      255: 
-      0): 
+      frame: np.ndarray:
+      width:
+      height:
+      255:
+      0):
       is_max:  (Default value = False)
       # pylint: disable:  (Default value = redefined-outer-name)
 
@@ -511,7 +536,7 @@ def boxes(frame, cords, **kwargs):
       frame(np.ndarray): image to draw the boxes on
       cords(list): list of coordinates of the boxes
       kwargs(dict): keyword arguments for box
-      **kwargs: 
+      **kwargs:
 
     Returns:
       image with the boxes
@@ -529,7 +554,7 @@ def canny(frame: np.ndarray, threshold1=100, threshold2=200) -> np.ndarray:
       frame(np.ndarray): image to apply Canny edge detection to
       threshold1(int, optional): first threshold for Canny edge detection (Default value = 100)
       threshold2(int, optional): second threshold for Canny edge detection (Default value = 200)
-      frame: np.ndarray: 
+      frame: np.ndarray:
 
     Returns:
       image with the Canny edge detection applied
@@ -559,12 +584,12 @@ def text(
       scale(float, optional): scale of the text (Default value = 0.5)
       color(tuple, optional): color of the text (Default value = (0)
       thickness(int, optional): thickness of the text (Default value = 2)
-      frame: np.ndarray: 
-      text_: str: 
-      x: int: 
-      y: int: 
-      255: 
-      0): 
+      frame: np.ndarray:
+      text_: str:
+      x: int:
+      y: int:
+      255:
+      0):
 
     Returns:
       image with the text
@@ -592,11 +617,11 @@ def text_above_box(
       scale(float, optional): scale of the text (Default value = 0.5)
       color(tuple, optional): color of the text (Default value = (0)
       thickness(int, optional): thickness of the text (Default value = 2)
-      frame: np.ndarray: 
-      text_: str: 
-      cords: tuple: 
-      255: 
-      0): 
+      frame: np.ndarray:
+      text_: str:
+      cords: tuple:
+      255:
+      0):
 
     Returns:
       image with the text
@@ -641,7 +666,7 @@ def stack(frames: list, resize_=None, cols=2) -> np.ndarray:
       frames(list): frames to stack
       resize_(tuple, optional): resize the frames (Default value = None)
       cols(int, optional): number of columns in the stacked image (Default value = 2)
-      frames: list: 
+      frames: list:
 
     Returns:
       stacked frames
@@ -693,7 +718,7 @@ def to_bytes(frame: np.ndarray) -> bytes:
 
     Args:
       frame(np.ndarray): frame to convert
-      frame: np.ndarray: 
+      frame: np.ndarray:
 
     Returns:
       bytes
@@ -707,7 +732,7 @@ def to_frame(bytes_: bytes) -> np.ndarray:
 
     Args:
       bytes_(bytes_: bytes): bytes to convert
-      bytes_: bytes: 
+      bytes_: bytes:
 
     Returns:
       frame
@@ -721,7 +746,7 @@ def to_base64(bytes_: bytes) -> str:
 
     Args:
       bytes_(bytes_: bytes): bytes to convert
-      bytes_: bytes: 
+      bytes_: bytes:
 
     Returns:
       base64 string
@@ -735,7 +760,7 @@ def from_base64(base64_: str) -> np.ndarray:
 
     Args:
       base64_(str): base64 string to convert
-      base64_: str: 
+      base64_: str:
 
     Returns:
       np.ndarray frame
