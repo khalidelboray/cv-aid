@@ -483,6 +483,39 @@ def circle(
     return cv2.circle(frame, center, radius, color, thickness, lineType)
 
 
+def bordered_circle(
+    frame: np.ndarray,
+    center: np.ndarray,
+    radius: np.ndarray,
+    color: tuple,
+    thickness: int,
+    lineType: int,
+    border_thickness: int,
+    border_color: tuple,
+) -> np.ndarray:
+    """Draws a circle on an image with a border.
+
+    Args:
+      frame(np.ndarray): image to draw the circle on
+      center(np.ndarray): center of the circle
+      radius(np.ndarray): radius of the circle
+      color(tuple, optional): color of the circle (Default value = (0)
+      thickness(int, optional): thickness of the circle (Default value = 2)
+      lineType(int, optional): type of the circle (Default value = cv2.LINE_8)
+      border_thickness(int, optional): thickness of the border (Default value = 2)
+      border_color(tuple, optional): color of the border
+
+    Returns:
+      image with the circle
+
+    """
+    # Draw the circle
+    frame = circle(frame, center, radius, color, thickness, lineType)
+    # Draw the border
+    frame = circle(frame, center, radius, border_color, border_thickness, lineType)
+    return frame
+
+
 def box(
     frame: np.ndarray,
     x,
@@ -526,6 +559,53 @@ def box(
         frame = cv2.rectangle(
             frame, (x, y), (x + width, y + height), color, thickness, line_type
         )
+    return frame
+
+
+def bordered_box(
+    frame: np.ndarray,
+    x,
+    y,
+    width,
+    height,
+    color: tuple,
+    thickness: int,
+    line_type: int,
+    border_thickness: int,
+    border_color: tuple,
+) -> np.ndarray:
+    """Draws a box on an image with a border.
+
+    Args:
+      frame(np.ndarray): image to draw the box on
+      x(int): x coordinate of the top left corner
+      y(int): y coordinate of the top left corner
+      w(int): width of the box
+      h(int): height of the box
+      color(tuple, optional): color of the box (Default value = (0)
+      thickness(int, optional): thickness of the box (Default value = 1)
+      line_type(int, optional): type of the box (Default value = cv2.LINE_8)
+      border_thickness(int, optional): thickness of the border (Default value = 2)
+      border_color(tuple, optional): color of the border
+
+    Returns:
+      image with the box
+
+    """
+    # Draw the border
+    frame = box(
+        frame,
+        x,
+        y,
+        width,
+        height,
+        border_color,
+        border_thickness,
+        line_type,
+    )
+    # Draw the box
+    frame = box(frame, x, y, width, height, color, thickness, line_type)
+
     return frame
 
 
@@ -767,3 +847,178 @@ def from_base64(base64_: str) -> np.ndarray:
 
     """
     return to_frame(base64.b64decode(base64_))
+
+
+def cornerBox(
+    frame: np.ndarray,
+    box_: tuple,
+    corner_length: float,
+    corner_thickness: float,
+    corner_color: tuple,
+    **kwargs,
+) -> np.ndarray:
+    """Draws a box with corners.
+
+    Args:
+      frame(np.ndarray): image to draw the box on
+      box(tuple): coordinates of the box
+      corner_length(float): length of the corners
+      corner_thickness(float): thickness of the corners
+      corner_color(tuple): color of the corners
+      kwargs: keyword arguments for the box
+
+    Returns:
+      image with the box
+
+    """
+    x, y, w, h = box_
+    if corner_length is None:
+        corner_length = min(w, h)
+    if corner_thickness is None:
+        corner_thickness = corner_length / 10
+    if corner_color is None:
+        corner_color = (0, 0, 0)
+    # Draw the box
+    frame = box(frame, *box_, **kwargs)
+
+    # Draw the corners
+    # Top left corner
+    frame = line(
+        frame,
+        (x, y),
+        (x + corner_length, y),
+        color=corner_color,
+        thickness=corner_thickness,
+    )
+    frame = line(
+        frame,
+        (x, y),
+        (x, y + corner_length),
+        color=corner_color,
+        thickness=corner_thickness,
+    )
+    # Top right corner
+    frame = line(
+        frame,
+        (x + w - corner_length, y),
+        (x + w, y),
+        color=corner_color,
+        thickness=corner_thickness,
+    )
+    frame = line(
+        frame,
+        (x + w, y),
+        (x + w, y + corner_length),
+        color=corner_color,
+        thickness=corner_thickness,
+    )
+    # Bottom left corner
+    frame = line(
+        frame,
+        (x, y + h - corner_length),
+        (x + corner_length, y + h),
+        color=corner_color,
+        thickness=corner_thickness,
+    )
+    frame = line(
+        frame,
+        (x, y + h),
+        (x, y + h - corner_length),
+        color=corner_color,
+        thickness=corner_thickness,
+    )
+    # Bottom right corner
+    frame = line(
+        frame,
+        (x + w - corner_length, y + h),
+        (x + w, y + h),
+        color=corner_color,
+        thickness=corner_thickness,
+    )
+    frame = line(
+        frame,
+        (x + w, y + h),
+        (x + w - corner_length, y + h - corner_length),
+        color=corner_color,
+        thickness=corner_thickness,
+    )
+    return frame
+
+
+def dropshade(
+    frame: np.ndarray,
+    box_: tuple,
+    intensity: float,
+    shade_color: tuple,
+    **kwargs,
+) -> np.ndarray:
+    """Shades a box.
+
+    Args:
+      frame(np.ndarray): image to draw the box on
+      box(tuple): coordinates of the box
+      intensity(float): intensity of the shading
+      color(tuple): color of the shading
+      kwargs: keyword arguments for the box
+
+    Returns:
+      image with the box
+
+    """
+    x, y, w, h = box_
+    # Draw the box
+    frame = box(frame, *box_, **kwargs)
+    # Shade the box
+    frame[y : y + h + 1, x : x + w + 1] = (
+        frame[y : y + h + 1, x : x + w + 1] * (1 - intensity)
+        + np.array(shade_color) * intensity
+    )
+
+    return frame
+
+
+def disk(center: tuple, radius: float, shape: tuple = None) -> list:
+    """Generate coordinates of pixels within circle.
+
+    Args:
+      center(tuple): center of the circle
+      radius(float): radius of the circle
+      shape(tuple): shape of the image
+
+    Returns:
+      list of coordinates
+
+    """
+    if shape is None:
+        shape = (1, 1)
+    x, y = np.ogrid[: shape[0], : shape[1]]
+    dist_from_center = np.sqrt((x - center[0]) ** 2 + (y - center[1]) ** 2)
+    mask = dist_from_center <= radius
+    return np.where(mask)
+
+
+def set_color(image: np.ndarray, coords: np.ndarray, color: np.ndarray, alpha: np.float = 1.0 ):
+  """
+  Set pixel color in the image at the given coordinates.
+  Coordinates that exceed the shape of the image will be ignored.
+  
+  Args:
+    image: numpy array of shape (H, W, C)
+    coords: numpy array of shape (N, 2)
+    color: numpy array of shape (C,)
+    alpha: float in [0, 1]
+  
+  Returns:
+    numpy array of shape (H, W, C)
+  """
+  coords = np.round(coords).astype(np.int32)
+  coords = coords[coords[:, 0] >= 0, :]
+  coords = coords[coords[:, 0] < image.shape[0], :]
+  coords = coords[coords[:, 1] >= 0, :]
+  coords = coords[coords[:, 1] < image.shape[1], :]
+  image[coords[:, 0], coords[:, 1], :] = (
+      image[coords[:, 0], coords[:, 1], :] * (1 - alpha) + color * alpha
+  )
+  return image
+
+

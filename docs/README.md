@@ -4,28 +4,34 @@
 
 ## Modules
 
+- [`frame`](./frame.md#module-frame)
 - [`haarcascades`](./haarcascades.md#module-haarcascades)
 - [`stream`](./stream.md#module-stream)
 - [`utils`](./utils.md#module-utils)
-- [`frame`](./frame.md#module-frame)
 
 ## Classes
 
+- [`frame.Frame`](./frame.md#class-frame): A class to represent a frame of video.
 - [`haarcascades.Haarcascades`](./haarcascades.md#class-haarcascades): Class for loading and using haarcascades.
 - [`stream.VideoStream`](./stream.md#class-videostream): A class for streaming video from a camera.
 - [`utils.TemplateResponse`](./utils.md#class-templateresponse): TemplateResponse class.
-- [`frame.Frame`](./frame.md#class-frame): A class for representing a frame.
 
 ## Functions
 
 - [`utils.batch`](./utils.md#function-batch): Batches an iterable.
 - [`utils.blur`](./utils.md#function-blur): Blurs an image.
+- [`utils.bordered_box`](./utils.md#function-bordered_box): Draws a box on an image with a border.
+- [`utils.bordered_circle`](./utils.md#function-bordered_circle): Draws a circle on an image with a border.
 - [`utils.box`](./utils.md#function-box): Draws a box on an image.
 - [`utils.boxes`](./utils.md#function-boxes): Draws multiple boxes on an image.
 - [`utils.canny`](./utils.md#function-canny): Applies Canny edge detection to an image.
+- [`utils.circle`](./utils.md#function-circle): Draws a circle on an image.
 - [`utils.concatenate`](./utils.md#function-concatenate): Concatenates two images.
 - [`utils.copy_frame`](./utils.md#function-copy_frame): Copies the frame before applying the function.
+- [`utils.cornerBox`](./utils.md#function-cornerbox): Draws a box with corners.
 - [`utils.crop`](./utils.md#function-crop): Crops an image.
+- [`utils.disk`](./utils.md#function-disk): Generate coordinates of pixels within circle.
+- [`utils.dropshade`](./utils.md#function-dropshade): Shades a box.
 - [`utils.find_fonts`](./utils.md#function-find_fonts): Finds all fonts in a directory.
 - [`utils.find_images`](./utils.md#function-find_images): Finds all images in a directory.
 - [`utils.find_videos`](./utils.md#function-find_videos): Finds all videos in a directory.
@@ -38,6 +44,7 @@
 - [`utils.resize`](./utils.md#function-resize): Resizes an image.
 - [`utils.rotate`](./utils.md#function-rotate): Rotates an image.
 - [`utils.search`](./utils.md#function-search): Searches for a template in an image.
+- [`utils.set_color`](./utils.md#function-set_color): Set pixel color in the image at the given coordinates.
 - [`utils.stack`](./utils.md#function-stack): Stacks frames into a single image.
 - [`utils.text`](./utils.md#function-text): Draws text on an image.
 - [`utils.text_above_box`](./utils.md#function-text_above_box): Draws text above a box on an image.

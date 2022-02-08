@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="../cv_aid/utils.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `utils`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href="../cv_aid/utils.py#L15"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L15"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `find_images`
 
@@ -25,7 +25,7 @@ Finds all images in a directory.
 **Args:**
  
  - <b>`path`</b> (Path):  path to the directory to search in 
- - <b>`path`</b>:  Path:  
+ - <b>`path`</b>:  Path: 
 
 
 
@@ -35,7 +35,7 @@ Finds all images in a directory.
 
 ---
 
-<a href="../cv_aid/utils.py#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `find_videos`
 
@@ -50,7 +50,7 @@ Finds all videos in a directory.
 **Args:**
  
  - <b>`path`</b> (Path):  path to the directory to search in 
- - <b>`path`</b>:  Path:  
+ - <b>`path`</b>:  Path: 
 
 
 
@@ -60,7 +60,7 @@ Finds all videos in a directory.
 
 ---
 
-<a href="../cv_aid/utils.py#L51"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L51"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `find_fonts`
 
@@ -75,7 +75,7 @@ Finds all fonts in a directory.
 **Args:**
  
  - <b>`path`</b> (Path):  path to the directory to search in 
- - <b>`path`</b>:  Path:  
+ - <b>`path`</b>:  Path: 
 
 
 
@@ -85,7 +85,7 @@ Finds all fonts in a directory.
 
 ---
 
-<a href="../cv_aid/utils.py#L69"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L69"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `rotate`
 
@@ -104,7 +104,7 @@ Rotates an image.
  - <b>`center`</b> (tuple, optional):  center of the image to rotate around (Default value = None) 
  - <b>`scale`</b> (float, optional):  scale of the image (Default value = 1.0) 
  - <b>`same_dim`</b> (bool, optional):  if True, the image will be resized to the same dimensions as the original (Default value = True) 
- - <b>`img`</b>:  np.ndarray:  
+ - <b>`img`</b>:  np.ndarray: 
 
 
 
@@ -114,7 +114,7 @@ Rotates an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L102"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L102"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `resize`
 
@@ -132,7 +132,7 @@ Resizes an image.
  - <b>`width`</b> (int):  width of the resized image 
  - <b>`height`</b> (int):  height of the resized image 
  - <b>`inter`</b> (inter: int, optional):  interpolation method (Default value = cv2.INTER_AREA) 
- - <b>`img`</b>:  np.ndarray:  
+ - <b>`img`</b>:  np.ndarray: 
 
 
 
@@ -142,7 +142,7 @@ Resizes an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `concatenate`
 
@@ -159,8 +159,8 @@ Concatenates two images.
  - <b>`image1`</b> (np.ndarray):  first image to concatenate 
  - <b>`image2`</b> (np.ndarray):  second image to concatenate 
  - <b>`axis`</b> (int, optional):  axis to concatenate the images on (Default value = 1) 
- - <b>`image1`</b>:  np.ndarray:  
- - <b>`image2`</b>:  np.ndarray:  
+ - <b>`image1`</b>:  np.ndarray: 
+ - <b>`image2`</b>:  np.ndarray: 
 
 
 
@@ -170,7 +170,7 @@ Concatenates two images.
 
 ---
 
-<a href="../cv_aid/utils.py#L150"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L150"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `batch`
 
@@ -186,8 +186,8 @@ Batches an iterable.
  
  - <b>`iterable`</b> (Iterable):  iterable to batch 
  - <b>`n`</b> (int):  number of items to batch 
- - <b>`iterable`</b>:  Iterable:  
- - <b>`length`</b>:  int:  
+ - <b>`iterable`</b>:  Iterable: 
+ - <b>`length`</b>:  int: 
 
 
 
@@ -197,7 +197,7 @@ Batches an iterable.
 
 ---
 
-<a href="../cv_aid/utils.py#L168"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L168"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `is_type`
 
@@ -222,7 +222,7 @@ Checks if an object is of a certain type.
 
 ---
 
-<a href="../cv_aid/utils.py#L182"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L182"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `verify_frame_type`
 
@@ -246,7 +246,7 @@ Verifies that the frame type is correct.
 
 ---
 
-<a href="../cv_aid/utils.py#L211"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L211"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `copy_frame`
 
@@ -270,7 +270,7 @@ Copies the frame before applying the function.
 
 ---
 
-<a href="../cv_aid/utils.py#L239"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L239"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `verify_deepstack_config`
 
@@ -294,7 +294,7 @@ Verifies that the DeepStack config is correct.
 
 ---
 
-<a href="../cv_aid/utils.py#L347"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L347"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `gray`
 
@@ -309,7 +309,7 @@ Converts a color image to grayscale.
 **Args:**
  
  - <b>`frame`</b> (np.ndarray):  image to convert to grayscale 
- - <b>`frame`</b>:  np.ndarray:  
+ - <b>`frame`</b>:  np.ndarray: 
 
 
 
@@ -319,7 +319,7 @@ Converts a color image to grayscale.
 
 ---
 
-<a href="../cv_aid/utils.py#L361"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L361"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `crop`
 
@@ -338,7 +338,7 @@ Crops an image.
  - <b>`y`</b> (int):  y coordinate of the top left corner 
  - <b>`w`</b> (int):  width of the crop 
  - <b>`h`</b> (int):  height of the crop 
- - <b>`frame`</b>:  np.ndarray:  width:  height:  
+ - <b>`frame`</b>:  np.ndarray: width: height: 
 
 
 
@@ -348,7 +348,7 @@ Crops an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L381"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L381"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `blur`
 
@@ -364,7 +364,7 @@ Blurs an image.
  
  - <b>`frame`</b> (np.ndarray):  image to blur 
  - <b>`ksize`</b> (tuple, optional):  size of the kernel (Default value = (5) 
- - <b>`frame`</b>:  np.ndarray:  5):  
+ - <b>`frame`</b>:  np.ndarray: 5): 
 
 
 
@@ -374,7 +374,7 @@ Blurs an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L397"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L397"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `flip`
 
@@ -390,7 +390,7 @@ Flips an image.
  
  - <b>`frame`</b> (np.ndarray):  image to flip 
  - <b>`flip_code`</b> (int, optional):  code for flipping the image (Default value = 1) 
- - <b>`frame`</b>:  np.ndarray:  
+ - <b>`frame`</b>:  np.ndarray: 
 
 
 
@@ -400,7 +400,7 @@ Flips an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L412"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L412"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `line`
 
@@ -427,9 +427,9 @@ Draws a line on an image.
  - <b>`color`</b> (tuple, optional):  color of the line (Default value = (0) 
  - <b>`thickness`</b> (int, optional):  thickness of the line (Default value = 2) 
  - <b>`line_type`</b> (int, optional):  type of the line (Default value = cv2.LINE_8) 
- - <b>`frame`</b>:  np.ndarray:  
- - <b>`start`</b>:  tuple:  
- - <b>`end`</b>:  tuple:  255:  0):  
+ - <b>`frame`</b>:  np.ndarray: 
+ - <b>`start`</b>:  tuple: 
+ - <b>`end`</b>:  tuple: 255: 0): 
 
 
 
@@ -439,7 +439,7 @@ Draws a line on an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L442"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L442"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `lines`
 
@@ -456,7 +456,7 @@ Draws multiple lines on an image.
  - <b>`frame`</b> (np.ndarray):  image to draw the lines on 
  - <b>`points`</b> (list):  list of points to draw lines between 
  - <b>`kwargs`</b> (dict):  keyword arguments for line 
- - <b>`points`</b>:  list:  **kwargs:  
+ - <b>`points`</b>:  list: **kwargs: 
 
 
 
@@ -466,7 +466,83 @@ Draws multiple lines on an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L461"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L461"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `circle`
+
+```python
+circle(
+    frame: ndarray,
+    center: tuple,
+    radius: int,
+    color=(0, 255, 0),
+    thickness=2,
+    lineType=8
+) → ndarray
+```
+
+Draws a circle on an image. 
+
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to draw the circle on 
+ - <b>`center`</b> (tuple):  center of the circle 
+ - <b>`radius`</b> (int):  radius of the circle 
+ - <b>`color`</b> (tuple, optional):  color of the circle (Default value = (0) 
+ - <b>`thickness`</b> (int, optional):  thickness of the circle (Default value = 2) 
+ - <b>`lineType`</b> (int, optional):  type of the circle (Default value = cv2.LINE_8) 
+
+
+
+**Returns:**
+ image with the circle 
+
+
+---
+
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L486"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `bordered_circle`
+
+```python
+bordered_circle(
+    frame: ndarray,
+    center: ndarray,
+    radius: ndarray,
+    color: tuple,
+    thickness: int,
+    lineType: int,
+    border_thickness: int,
+    border_color: tuple
+) → ndarray
+```
+
+Draws a circle on an image with a border. 
+
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to draw the circle on 
+ - <b>`center`</b> (np.ndarray):  center of the circle 
+ - <b>`radius`</b> (np.ndarray):  radius of the circle 
+ - <b>`color`</b> (tuple, optional):  color of the circle (Default value = (0) 
+ - <b>`thickness`</b> (int, optional):  thickness of the circle (Default value = 2) 
+ - <b>`lineType`</b> (int, optional):  type of the circle (Default value = cv2.LINE_8) 
+ - <b>`border_thickness`</b> (int, optional):  thickness of the border (Default value = 2) 
+ - <b>`border_color`</b> (tuple, optional):  color of the border 
+
+
+
+**Returns:**
+ image with the circle 
+
+
+---
+
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L519"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `box`
 
@@ -499,7 +575,7 @@ Draws a box on an image.
  - <b>`thickness`</b> (int, optional):  thickness of the box (Default value = 1) 
  - <b>`line_type`</b> (int, optional):  type of the box (Default value = cv2.LINE_8) 
  - <b>`max`</b> (bool):  if True, treat the box as a max box 
- - <b>`frame`</b>:  np.ndarray:  width:  height:  255:  0):  
+ - <b>`frame`</b>:  np.ndarray: width: height: 255: 0): 
  - <b>`is_max`</b>:   (Default value = False) 
  - <b>`# pylint`</b>:  disable:  (Default value = redefined-outer-name) 
 
@@ -511,7 +587,51 @@ Draws a box on an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L507"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L565"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `bordered_box`
+
+```python
+bordered_box(
+    frame: ndarray,
+    x,
+    y,
+    width,
+    height,
+    color: tuple,
+    thickness: int,
+    line_type: int,
+    border_thickness: int,
+    border_color: tuple
+) → ndarray
+```
+
+Draws a box on an image with a border. 
+
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to draw the box on 
+ - <b>`x`</b> (int):  x coordinate of the top left corner 
+ - <b>`y`</b> (int):  y coordinate of the top left corner 
+ - <b>`w`</b> (int):  width of the box 
+ - <b>`h`</b> (int):  height of the box 
+ - <b>`color`</b> (tuple, optional):  color of the box (Default value = (0) 
+ - <b>`thickness`</b> (int, optional):  thickness of the box (Default value = 1) 
+ - <b>`line_type`</b> (int, optional):  type of the box (Default value = cv2.LINE_8) 
+ - <b>`border_thickness`</b> (int, optional):  thickness of the border (Default value = 2) 
+ - <b>`border_color`</b> (tuple, optional):  color of the border 
+
+
+
+**Returns:**
+ image with the box 
+
+
+---
+
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L612"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `boxes`
 
@@ -527,7 +647,7 @@ Draws multiple boxes on an image.
  
  - <b>`frame`</b> (np.ndarray):  image to draw the boxes on 
  - <b>`cords`</b> (list):  list of coordinates of the boxes 
- - <b>`kwargs`</b> (dict):  keyword arguments for box **kwargs:  
+ - <b>`kwargs`</b> (dict):  keyword arguments for box **kwargs: 
 
 
 
@@ -537,7 +657,7 @@ Draws multiple boxes on an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L525"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L630"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `canny`
 
@@ -554,7 +674,7 @@ Applies Canny edge detection to an image.
  - <b>`frame`</b> (np.ndarray):  image to apply Canny edge detection to 
  - <b>`threshold1`</b> (int, optional):  first threshold for Canny edge detection (Default value = 100) 
  - <b>`threshold2`</b> (int, optional):  second threshold for Canny edge detection (Default value = 200) 
- - <b>`frame`</b>:  np.ndarray:  
+ - <b>`frame`</b>:  np.ndarray: 
 
 
 
@@ -564,7 +684,7 @@ Applies Canny edge detection to an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L541"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L646"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `text`
 
@@ -595,10 +715,10 @@ Draws text on an image.
  - <b>`scale`</b> (float, optional):  scale of the text (Default value = 0.5) 
  - <b>`color`</b> (tuple, optional):  color of the text (Default value = (0) 
  - <b>`thickness`</b> (int, optional):  thickness of the text (Default value = 2) 
- - <b>`frame`</b>:  np.ndarray:  
- - <b>`text_`</b>:  str:  
- - <b>`x`</b>:  int:  
- - <b>`y`</b>:  int:  255:  0):  
+ - <b>`frame`</b>:  np.ndarray: 
+ - <b>`text_`</b>:  str: 
+ - <b>`x`</b>:  int: 
+ - <b>`y`</b>:  int: 255: 0): 
 
 
 
@@ -608,7 +728,7 @@ Draws text on an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L576"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L681"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `text_above_box`
 
@@ -637,9 +757,9 @@ Draws text above a box on an image.
  - <b>`scale`</b> (float, optional):  scale of the text (Default value = 0.5) 
  - <b>`color`</b> (tuple, optional):  color of the text (Default value = (0) 
  - <b>`thickness`</b> (int, optional):  thickness of the text (Default value = 2) 
- - <b>`frame`</b>:  np.ndarray:  
- - <b>`text_`</b>:  str:  
- - <b>`cords`</b>:  tuple:  255:  0):  
+ - <b>`frame`</b>:  np.ndarray: 
+ - <b>`text_`</b>:  str: 
+ - <b>`cords`</b>:  tuple: 255: 0): 
 
 
 
@@ -649,7 +769,7 @@ Draws text above a box on an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L617"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L722"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `search`
 
@@ -676,7 +796,7 @@ Searches for a template in an image.
 
 ---
 
-<a href="../cv_aid/utils.py#L637"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L742"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `stack`
 
@@ -693,7 +813,7 @@ Stacks frames into a single image.
  - <b>`frames`</b> (list):  frames to stack 
  - <b>`resize_`</b> (tuple, optional):  resize the frames (Default value = None) 
  - <b>`cols`</b> (int, optional):  number of columns in the stacked image (Default value = 2) 
- - <b>`frames`</b>:  list:  
+ - <b>`frames`</b>:  list: 
 
 
 
@@ -703,7 +823,7 @@ Stacks frames into a single image.
 
 ---
 
-<a href="../cv_aid/utils.py#L691"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L796"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `to_bytes`
 
@@ -718,7 +838,7 @@ Converts a frame to bytes.
 **Args:**
  
  - <b>`frame`</b> (np.ndarray):  frame to convert 
- - <b>`frame`</b>:  np.ndarray:  
+ - <b>`frame`</b>:  np.ndarray: 
 
 
 
@@ -728,7 +848,7 @@ Converts a frame to bytes.
 
 ---
 
-<a href="../cv_aid/utils.py#L705"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L810"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `to_frame`
 
@@ -743,7 +863,7 @@ Converts bytes to a frame.
 **Args:**
  
  - <b>`bytes_`</b> (bytes_: bytes):  bytes to convert 
- - <b>`bytes_`</b>:  bytes:  
+ - <b>`bytes_`</b>:  bytes: 
 
 
 
@@ -753,7 +873,7 @@ Converts bytes to a frame.
 
 ---
 
-<a href="../cv_aid/utils.py#L719"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L824"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `to_base64`
 
@@ -768,7 +888,7 @@ Converts bytes to a base64 string.
 **Args:**
  
  - <b>`bytes_`</b> (bytes_: bytes):  bytes to convert 
- - <b>`bytes_`</b>:  bytes:  
+ - <b>`bytes_`</b>:  bytes: 
 
 
 
@@ -778,7 +898,7 @@ Converts bytes to a base64 string.
 
 ---
 
-<a href="../cv_aid/utils.py#L733"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L838"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `from_base64`
 
@@ -793,7 +913,7 @@ Converts a base64 string to bytes.
 **Args:**
  
  - <b>`base64_`</b> (str):  base64 string to convert 
- - <b>`base64_`</b>:  str:  
+ - <b>`base64_`</b>:  str: 
 
 
 
@@ -803,12 +923,135 @@ Converts a base64 string to bytes.
 
 ---
 
-<a href="../cv_aid/utils.py#L279"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L852"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `cornerBox`
+
+```python
+cornerBox(
+    frame: ndarray,
+    box_: tuple,
+    corner_length: float,
+    corner_thickness: float,
+    corner_color: tuple,
+    **kwargs
+) → ndarray
+```
+
+Draws a box with corners. 
+
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to draw the box on 
+ - <b>`box`</b> (tuple):  coordinates of the box 
+ - <b>`corner_length`</b> (float):  length of the corners 
+ - <b>`corner_thickness`</b> (float):  thickness of the corners 
+ - <b>`corner_color`</b> (tuple):  color of the corners 
+ - <b>`kwargs`</b>:  keyword arguments for the box 
+
+
+
+**Returns:**
+ image with the box 
+
+
+---
+
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L948"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `dropshade`
+
+```python
+dropshade(
+    frame: ndarray,
+    box_: tuple,
+    intensity: float,
+    shade_color: tuple,
+    **kwargs
+) → ndarray
+```
+
+Shades a box. 
+
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (np.ndarray):  image to draw the box on 
+ - <b>`box`</b> (tuple):  coordinates of the box 
+ - <b>`intensity`</b> (float):  intensity of the shading 
+ - <b>`color`</b> (tuple):  color of the shading 
+ - <b>`kwargs`</b>:  keyword arguments for the box 
+
+
+
+**Returns:**
+ image with the box 
+
+
+---
+
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L980"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `disk`
+
+```python
+disk(center: tuple, radius: float, shape: tuple = None) → list
+```
+
+Generate coordinates of pixels within circle. 
+
+
+
+**Args:**
+ 
+ - <b>`center`</b> (tuple):  center of the circle 
+ - <b>`radius`</b> (float):  radius of the circle 
+ - <b>`shape`</b> (tuple):  shape of the image 
+
+
+
+**Returns:**
+ list of coordinates 
+
+
+---
+
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L1000"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `set_color`
+
+```python
+set_color(image: ndarray, coords: ndarray, color: ndarray, alpha: float = 1.0)
+```
+
+Set pixel color in the image at the given coordinates. Coordinates that exceed the shape of the image will be ignored. 
+
+
+
+**Args:**
+ 
+ - <b>`image`</b>:  numpy array of shape (H, W, C) 
+ - <b>`coords`</b>:  numpy array of shape (N, 2) 
+ - <b>`color`</b>:  numpy array of shape (C,) 
+ - <b>`alpha`</b>:  float in [0, 1] 
+
+
+
+**Returns:**
+ numpy array of shape (H, W, C) 
+
+
+---
+
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L279"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `TemplateResponse`
 TemplateResponse class. 
 
-<a href="../cv_aid/utils.py#L282"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L282"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -825,7 +1068,7 @@ Initializes the TemplateResponse class.
 
 ---
 
-<a href="../cv_aid/utils.py#L320"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L320"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `boxes`
 
@@ -839,7 +1082,7 @@ Returns the boxes of the template.
 
 **Args:**
  
- - <b>`color`</b> (tuple, optional):  color of the boxes (Default value = (0) 255:  0):  
+ - <b>`color`</b> (tuple, optional):  color of the boxes (Default value = (0) 255: 0): 
 
 
 
@@ -848,7 +1091,7 @@ Returns the boxes of the template.
 
 ---
 
-<a href="../cv_aid/utils.py#L300"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L300"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `draw_boxes`
 

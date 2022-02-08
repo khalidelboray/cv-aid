@@ -8,9 +8,16 @@ import numpy as np
 
 from cv_aid import utils
 from cv_aid.haarcascades import Haarcascades
-from cv_aid._dlib import Dlib
 
-_dlib = Dlib()
+_is_dl_available = True
+# Check if dlib is installed
+try:
+    import dlib
+    from cv_aid._dlib import Dlib
+    _dlib = Dlib()
+except ImportError:
+    _is_dl_available = False
+
 
 
 class Frame:  # pylint: disable=too-many-public-methods
@@ -19,11 +26,10 @@ class Frame:  # pylint: disable=too-many-public-methods
     def __init__(self, frame):
         """Initialize a Frame object.
 
-        :param frame: The frame to be represented.
-        :type frame: numpy.ndarray
+        Args:
+          frame(numpy.ndarray): The frame to wrap.
         """
         self.frame = frame
-        self.original_frame = frame.copy()
         self._haarcascades = None
         self._dlib = None
 
@@ -35,6 +41,7 @@ class Frame:  # pylint: disable=too-many-public-methods
           path(str): Path to the file.
 
         Returns:
+          The resulting frame.
 
         """
         return cls(cv2.imread(str(path)))
@@ -67,11 +74,8 @@ class Frame:  # pylint: disable=too-many-public-methods
     def to_bytes(self) -> bytes:
         """Convert the frame to bytes.
 
-        :return: The resulting bytes.
-
-        Args:
-
         Returns:
+          The resulting bytes.
 
         """
         return self.frame.tobytes()
@@ -279,8 +283,8 @@ class Frame:  # pylint: disable=too-many-public-methods
           color(tuple): The color of the box.
           thickness(int, optional): The thickness of the box. (Default value = 1)
           line_type(int, optional): The type of the box. (Default value = cv2.LINE_8)
-          # pylint: disable:  (Default value = invalid-nameis_max=False)
-
+          is_max(bool, optional): Whether or not to draw the max box. (Default value = False)
+          
         Returns:
           The resulting frame.
 
@@ -445,7 +449,7 @@ class Frame:  # pylint: disable=too-many-public-methods
         """
         cv2.imshow(title, self.frame)
 
-    def save(self, path, name):
+    def save(self, name, path="./"):
         """Save the frame.
 
         Args:
@@ -475,6 +479,10 @@ class Frame:  # pylint: disable=too-many-public-methods
     @property
     def dlib(self):
         """Provides access to the dlib."""
+        if not _is_dl_available:
+          raise ImportError(
+              "Dlib is not installed. Please install it with `pip install dlib`. or run `pip install cv_aid[dlib]`."
+          )
         # Create the dlib class if it doesn't exist
         if not hasattr(self, "_dlib") or getattr(self, "_dlib") is None:
             self._dlib = _dlib

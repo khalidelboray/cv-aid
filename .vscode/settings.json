@@ -1,0 +1,17 @@
+{
+    "cSpell.words": [
+        "arange",
+        "astype",
+        "CCOEFF",
+        "dlib",
+        "dtype",
+        "imread",
+        "imshow",
+        "imwrite",
+        "ksize",
+        "ndarray",
+        "ogrid",
+        "tobytes"
+    ],
+    "python.formatting.provider": "black"
+}

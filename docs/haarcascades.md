@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="../cv_aid/haarcascades.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `haarcascades`
 
@@ -11,12 +11,12 @@
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `Haarcascades`
 Class for loading and using haarcascades. 
 
-<a href="../cv_aid/haarcascades.py#L11"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L11"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -31,7 +31,7 @@ Initializes Haarcascades.
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L167"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L167"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_all`
 
@@ -47,7 +47,7 @@ Detects all objects in an image.
  
  - <b>`image`</b>:  image to detect objects in 
  - <b>`kwargs`</b>:  kwargs for detectMultiScale 
- - <b>`image`</b>:  np.ndarray:  **kwargs:  
+ - <b>`image`</b>:  np.ndarray: **kwargs: 
 
 
 
@@ -56,7 +56,7 @@ Detects all objects in an image.
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L65"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L65"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_eyes`
 
@@ -72,7 +72,7 @@ Detects eyes in an image.
  
  - <b>`image`</b>:  image to detect eyes in 
  - <b>`kwargs`</b>:  kwargs for detectMultiScale 
- - <b>`image`</b>:  np.ndarray:  **kwargs:  
+ - <b>`image`</b>:  np.ndarray: **kwargs: 
 
 
 
@@ -81,7 +81,7 @@ Detects eyes in an image.
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L48"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L48"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_faces`
 
@@ -97,7 +97,7 @@ Detects faces in an image.
  
  - <b>`image`</b>:  image to detect faces in 
  - <b>`kwargs`</b>:  kwargs for detectMultiScale 
- - <b>`image`</b>:  np.ndarray:  **kwargs:  
+ - <b>`image`</b>:  np.ndarray: **kwargs: 
 
 
 
@@ -106,7 +106,7 @@ Detects faces in an image.
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_fullbody`
 
@@ -122,7 +122,7 @@ Detects full body in an image.
  
  - <b>`image`</b>:  image to detect full body in 
  - <b>`kwargs`</b>:  kwargs for detectMultiScale 
- - <b>`image`</b>:  np.ndarray:  **kwargs:  
+ - <b>`image`</b>:  np.ndarray: **kwargs: 
 
 
 
@@ -131,7 +131,7 @@ Detects full body in an image.
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L116"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L116"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_lowerbody`
 
@@ -147,7 +147,7 @@ Detects lower body in an image.
  
  - <b>`image`</b>:  image to detect lower body in 
  - <b>`kwargs`</b>:  kwargs for detectMultiScale 
- - <b>`image`</b>:  np.ndarray:  **kwargs:  
+ - <b>`image`</b>:  np.ndarray: **kwargs: 
 
 
 
@@ -156,7 +156,7 @@ Detects lower body in an image.
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L150"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L150"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_profileface`
 
@@ -172,7 +172,7 @@ Detects profile face in an image.
  
  - <b>`image`</b>:  image to detect profile face in 
  - <b>`kwargs`</b>:  kwargs for detectMultiScale 
- - <b>`image`</b>:  np.ndarray:  **kwargs:  
+ - <b>`image`</b>:  np.ndarray: **kwargs: 
 
 
 
@@ -181,7 +181,7 @@ Detects profile face in an image.
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L82"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L82"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_smiles`
 
@@ -197,7 +197,7 @@ Detects smiles in an image.
  
  - <b>`image`</b>:  image to detect smiles in 
  - <b>`kwargs`</b>:  kwargs for detectMultiScale 
- - <b>`image`</b>:  np.ndarray:  **kwargs:  
+ - <b>`image`</b>:  np.ndarray: **kwargs: 
 
 
 
@@ -206,7 +206,7 @@ Detects smiles in an image.
 
 ---
 
-<a href="../cv_aid/haarcascades.py#L99"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L99"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_upperbody`
 
@@ -222,7 +222,7 @@ Detects upper body in an image.
  
  - <b>`image`</b>:  image to detect upper body in 
  - <b>`kwargs`</b>:  kwargs for detectMultiScale 
- - <b>`image`</b>:  np.ndarray:  **kwargs:  
+ - <b>`image`</b>:  np.ndarray: **kwargs: 
 
 
 

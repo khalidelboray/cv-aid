@@ -1,8 +1,8 @@
 <!-- markdownlint-disable -->
 
-<a href="../cv_aid/frame.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-# <kbd>module</kbd> `cv_aid.frame`
+# <kbd>module</kbd> `frame`
 
 
 
@@ -11,12 +11,12 @@
 
 ---
 
-<a href="../cv_aid/frame.py#L13"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L23"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `Frame`
 A class to represent a frame of video. 
 
-<a href="../cv_aid/frame.py#L16"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L26"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -26,7 +26,11 @@ __init__(frame)
 
 Initialize a Frame object. 
 
-:param frame: The frame to be represented. :type frame: numpy.ndarray 
+
+
+**Args:**
+ 
+ - <b>`frame`</b> (numpy.ndarray):  The frame to wrap. 
 
 
 ---
@@ -34,6 +38,12 @@ Initialize a Frame object.
 #### <kbd>property</kbd> channels
 
 Get the number of channels in the frame. 
+
+---
+
+#### <kbd>property</kbd> dlib
+
+Provides access to the dlib. 
 
 ---
 
@@ -69,7 +79,7 @@ Get the width of the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L401"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L429"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `abs`
 
@@ -93,7 +103,7 @@ Take the absolute value of the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L192"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L200"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `blur`
 
@@ -116,7 +126,7 @@ Blur the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L237"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L265"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `box`
 
@@ -137,7 +147,7 @@ Draw a box on the frame.
  - <b>`color`</b> (tuple):  The color of the box. 
  - <b>`thickness`</b> (int, optional):  The thickness of the box. (Default value = 1) 
  - <b>`line_type`</b> (int, optional):  The type of the box. (Default value = cv2.LINE_8) 
- - <b>`# pylint`</b>:  disable:  (Default value = invalid-nameis_max=False) 
+ - <b>`is_max`</b> (bool, optional):  Whether or not to draw the max box. (Default value = False) 
 
 
 
@@ -146,7 +156,7 @@ Draw a box on the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L301"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L329"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `boxes`
 
@@ -173,7 +183,7 @@ Draw boxes on the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L204"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L212"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `canny`
 
@@ -197,7 +207,34 @@ Apply the Canny edge detector.
 
 ---
 
-<a href="../cv_aid/frame.py#L128"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L245"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+### <kbd>method</kbd> `circle`
+
+```python
+circle(center, radius, color=(0, 255, 0), thickness=1, line_type=8) → Frame
+```
+
+Draw a circle on the frame. 
+
+
+
+**Args:**
+ 
+ - <b>`center`</b> (tuple):  The center of the circle. 
+ - <b>`radius`</b> (int):  The radius of the circle. 
+ - <b>`color`</b> (tuple, optional):  The color of the circle. (Default value = (0) 
+ - <b>`thickness`</b> (int, optional):  The thickness of the circle. (Default value = 1) 
+ - <b>`line_type`</b> (int, optional):  The type of the circle. (Default value = cv2.LINE_8) 
+
+
+
+**Returns:**
+ The resulting frame. 
+
+---
+
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L136"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `crop`
 
@@ -223,7 +260,7 @@ Crop the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L156"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L164"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `crop_to_ratio`
 
@@ -246,7 +283,7 @@ Crop the frame to a specific ratio.
 
 ---
 
-<a href="../cv_aid/frame.py#L180"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L188"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `crop_to_ratio_height`
 
@@ -269,7 +306,7 @@ Crop the frame to a specific ratio.
 
 ---
 
-<a href="../cv_aid/frame.py#L168"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L176"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `crop_to_ratio_width`
 
@@ -292,7 +329,7 @@ Crop the frame to a specific ratio.
 
 ---
 
-<a href="../cv_aid/frame.py#L143"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L151"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `crop_to_size`
 
@@ -316,7 +353,7 @@ Crop the frame to a specific size.
 
 ---
 
-<a href="../cv_aid/frame.py#L116"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L124"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `flip`
 
@@ -339,7 +376,7 @@ Flip the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L75"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L83"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `gray`
 
@@ -363,7 +400,7 @@ Convert the frame to grayscale.
 
 ---
 
-<a href="../cv_aid/frame.py#L217"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L225"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `line`
 
@@ -382,7 +419,7 @@ Draw a line on the frame.
  - <b>`color`</b> (tuple, optional):  The color of the line. (Default value = (0) 
  - <b>`thickness`</b> (int, optional):  The thickness of the line. (Default value = 1) 
  - <b>`line_type`</b> (int, optional):  The type of the line. (Default value = cv2.LINE_8) 
- - <b>`255`</b>:  param 0): 0):  
+ - <b>`255`</b>:  param 0): 0): 
 
 
 
@@ -391,7 +428,7 @@ Draw a line on the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L278"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L306"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `lines`
 
@@ -417,7 +454,7 @@ Draw lines on the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L26"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L36"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>classmethod</kbd> `load`
 
@@ -436,11 +473,11 @@ Load a frame from a file.
 
 
 **Returns:**
- 
+ The resulting frame. 
 
 ---
 
-<a href="../cv_aid/frame.py#L87"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L95"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `resize`
 
@@ -465,7 +502,7 @@ Resize the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L101"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L109"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `rotate`
 
@@ -491,12 +528,12 @@ Rotate the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L424"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L452"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `save`
 
 ```python
-save(path, name)
+save(name, path='./')
 ```
 
 Save the frame. 
@@ -515,7 +552,7 @@ Save the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L413"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L441"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `show`
 
@@ -538,7 +575,7 @@ Show the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L328"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L356"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `text`
 
@@ -565,7 +602,7 @@ Draw text on the frame.
  - <b>`font_face`</b> (int, optional):  The font face of the text. (Default value = cv2.FONT_HERSHEY_SIMPLEX) 
  - <b>`font_scale`</b> (float, optional):  The font scale of the text. (Default value = 1.0) 
  - <b>`thickness`</b> (int, optional):  The thickness of the text. (Default value = 1) 
- - <b>`255`</b>:  param 0): 0):  
+ - <b>`255`</b>:  param 0): 0): 
 
 
 
@@ -574,7 +611,7 @@ Draw text on the frame.
 
 ---
 
-<a href="../cv_aid/frame.py#L63"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/frame.py#L74"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `to_bytes`
 
@@ -584,17 +621,10 @@ to_bytes() → bytes
 
 Convert the frame to bytes. 
 
-:return: The resulting bytes. 
-
-
-
-**Args:**
- 
-
 
 
 **Returns:**
- 
+  The resulting bytes. 
 
 
 

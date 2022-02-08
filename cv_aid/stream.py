@@ -18,7 +18,15 @@ class VideoStream:
 
     """
 
-    def __init__(self, src, width=None, height=None, on_frame=None):
+    def __init__(
+        self,
+        src,
+        width=None,
+        height=None,
+        on_frame=None,
+        callback_args=(),
+        callback_kwargs={},
+    ):
         """
         Initialize the video stream and read the first frame from the stream.
 
@@ -36,6 +44,8 @@ class VideoStream:
             self.stream.set(cv2.CAP_PROP_FRAME_WIDTH, width)
             self.stream.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
         self.on_frame = on_frame
+        self.callback_args = callback_args
+        self.callback_kwargs = callback_kwargs
         self.frame = self.read()  # The current frame.
         self.thread = Thread(
             target=self.update, args=()
@@ -50,7 +60,7 @@ class VideoStream:
             self.stop()
         frame = Frame(frame)
         if self.on_frame is not None:
-            frame = self.on_frame(frame)
+            frame = self.on_frame(frame, *self.callback_args, **self.callback_kwargs)
             if not isinstance(frame, Frame):
                 frame = Frame(frame)
         return frame

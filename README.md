@@ -159,7 +159,7 @@ all tests are in `tests/` directory.
     `Give it a try!`
 
     ```python
-    f# pylint: disable=C0103
+    # pylint: disable=C0103
 
     import math
 
@@ -217,42 +217,49 @@ all tests are in `tests/` directory.
                 - 10
             )
             frame = (
+                # Glasses connection line
                 frame.line(
                     (left_eye_center[0] - left_eye_radius, left_eye_center[1]),
                     (right_eye_center[0] + right_eye_radius, right_eye_center[1]),
                     (0, 0, 0),
                     4,
                 )
+                # Glasses circle 1 *Border*
                 .circle(
                     left_eye_center,
                     left_eye_radius,
                     (0, 0, 0),
                     4,
                 )
+                # Glasses circle 1
                 .circle(
                     left_eye_center,
                     left_eye_radius,
                     (0, 0, 255),
                     2,
                 )
+                # Glasses circle 2 *Border*
                 .circle(
                     right_eye_center,
                     right_eye_radius,
                     (0, 0, 0),
                     4,
                 )
+                # Glasses circle 2
                 .circle(
                     right_eye_center,
                     right_eye_radius,
                     (0, 0, 255),
                     2,
                 )
+                # Ears connection line 1
                 .line(
                     (face_landmarks.part(0).x, face_landmarks.part(0).y),
                     (right_eye_center[0] - right_eye_radius, right_eye_center[1]),
                     (0, 0, 255),
                     2,
                 )
+                # Ears connection line 1
                 .line(
                     (face_landmarks.part(16).x, face_landmarks.part(16).y),
                     (left_eye_center[0] + left_eye_radius, left_eye_center[1]),
@@ -260,15 +267,20 @@ all tests are in `tests/` directory.
                     2,
                 )
             )
+            # Overlay the frame with the image of the glasses colored in transparent black
             overlay = frame.frame.copy()
             alpha = 0.5
-
+            # Get first circle rows and columns (pixel coordinates)
             rr, cc = disk(right_eye_center[::-1], right_eye_radius)
+            # Set the color of the circle
             set_color(overlay, (rr, cc), (0, 0, 0))
 
+            # Get second circle rows and columns (pixel coordinates)
             rr, cc = disk(left_eye_center[::-1], left_eye_radius)
+            # Set the color of the circle
             set_color(overlay, (rr, cc), (0, 0, 0))
 
+            # Overlay the image with the overlay image
             frame.frame = cv2.addWeighted(overlay, alpha, frame.frame, 1 - alpha, 0)
 
         return frame
