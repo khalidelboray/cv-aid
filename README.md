@@ -8,7 +8,7 @@ CV Aid is a set of helpers of computer vision tasks.
 
 ### From source
 
-```
+```bash
 git clone https://github.com/khalidelboray/cv-aid
 cd cv-aid
 poetry install
