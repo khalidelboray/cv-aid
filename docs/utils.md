@@ -10,7 +10,7 @@
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L15"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L14"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `find_images`
 
@@ -35,7 +35,7 @@ Finds all images in a directory.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L32"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `find_videos`
 
@@ -60,7 +60,7 @@ Finds all videos in a directory.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L51"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L50"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `find_fonts`
 
@@ -85,7 +85,7 @@ Finds all fonts in a directory.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L69"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L68"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `rotate`
 
@@ -114,7 +114,7 @@ Rotates an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L102"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L101"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `resize`
 
@@ -142,7 +142,7 @@ Resizes an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L132"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `concatenate`
 
@@ -170,7 +170,7 @@ Concatenates two images.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L150"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L149"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `batch`
 
@@ -197,7 +197,7 @@ Batches an iterable.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L168"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L167"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `is_type`
 
@@ -222,7 +222,7 @@ Checks if an object is of a certain type.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L182"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L181"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `verify_frame_type`
 
@@ -246,7 +246,7 @@ Verifies that the frame type is correct.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L211"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L210"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `copy_frame`
 
@@ -270,7 +270,7 @@ Copies the frame before applying the function.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L239"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L238"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `verify_deepstack_config`
 
@@ -294,7 +294,7 @@ Verifies that the DeepStack config is correct.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L347"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L346"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `gray`
 
@@ -319,7 +319,7 @@ Converts a color image to grayscale.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L361"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L360"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `crop`
 
@@ -348,7 +348,7 @@ Crops an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L381"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L380"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `blur`
 
@@ -374,7 +374,7 @@ Blurs an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L397"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L396"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `flip`
 
@@ -400,7 +400,7 @@ Flips an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L412"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L411"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `line`
 
@@ -439,7 +439,7 @@ Draws a line on an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L442"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L441"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `lines`
 
@@ -466,7 +466,7 @@ Draws multiple lines on an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L461"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L460"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `circle`
 
@@ -502,7 +502,7 @@ Draws a circle on an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L486"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L485"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `bordered_circle`
 
@@ -542,7 +542,7 @@ Draws a circle on an image with a border.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L519"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L518"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `box`
 
@@ -587,7 +587,7 @@ Draws a box on an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L565"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L564"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `bordered_box`
 
@@ -631,7 +631,7 @@ Draws a box on an image with a border.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L612"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L611"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `boxes`
 
@@ -657,7 +657,7 @@ Draws multiple boxes on an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L630"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L629"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `canny`
 
@@ -684,7 +684,7 @@ Applies Canny edge detection to an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L646"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L645"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `text`
 
@@ -728,7 +728,7 @@ Draws text on an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L681"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L680"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `text_above_box`
 
@@ -769,7 +769,7 @@ Draws text above a box on an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L722"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L721"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `search`
 
@@ -796,7 +796,7 @@ Searches for a template in an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L742"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L741"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `stack`
 
@@ -823,7 +823,7 @@ Stacks frames into a single image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L796"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L795"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `to_bytes`
 
@@ -848,7 +848,7 @@ Converts a frame to bytes.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L810"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L809"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `to_frame`
 
@@ -873,7 +873,7 @@ Converts bytes to a frame.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L824"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L823"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `to_base64`
 
@@ -898,7 +898,7 @@ Converts bytes to a base64 string.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L838"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L837"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `from_base64`
 
@@ -923,7 +923,7 @@ Converts a base64 string to bytes.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L852"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L851"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `cornerBox`
 
@@ -959,7 +959,7 @@ Draws a box with corners.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L948"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L947"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `dropshade`
 
@@ -993,7 +993,7 @@ Shades a box.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L980"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L979"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `disk`
 
@@ -1019,7 +1019,7 @@ Generate coordinates of pixels within circle.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L1000"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L999"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `set_color`
 
@@ -1046,12 +1046,12 @@ Set pixel color in the image at the given coordinates. Coordinates that exceed t
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L279"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L278"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `TemplateResponse`
 TemplateResponse class. 
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L282"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L281"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -1068,7 +1068,7 @@ Initializes the TemplateResponse class.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L320"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L319"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `boxes`
 
@@ -1091,7 +1091,7 @@ Returns the boxes of the template.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L300"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/utils.py#L299"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `draw_boxes`
 

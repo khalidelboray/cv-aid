@@ -11,12 +11,12 @@
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L7"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `Haarcascades`
 Class for loading and using haarcascades. 
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L11"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L10"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -31,7 +31,7 @@ Initializes Haarcascades.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L167"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L166"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_all`
 
@@ -56,7 +56,7 @@ Detects all objects in an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L65"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L64"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_eyes`
 
@@ -81,7 +81,7 @@ Detects eyes in an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L48"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L47"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_faces`
 
@@ -106,7 +106,7 @@ Detects faces in an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L132"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_fullbody`
 
@@ -131,7 +131,7 @@ Detects full body in an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L116"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L115"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_lowerbody`
 
@@ -156,7 +156,7 @@ Detects lower body in an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L150"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L149"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_profileface`
 
@@ -181,7 +181,7 @@ Detects profile face in an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L82"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L81"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_smiles`
 
@@ -206,7 +206,7 @@ Detects smiles in an image.
 
 ---
 
-<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L99"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khalidelboray/cv-aid/blob/main/cv_aid/haarcascades.py#L98"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `detect_upperbody`
 

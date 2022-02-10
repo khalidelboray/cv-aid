@@ -1,5 +1,4 @@
 # pylint: disable=C0103
-__docformat__ = "restructuredtext en"
 
 import cv2
 import numpy as np

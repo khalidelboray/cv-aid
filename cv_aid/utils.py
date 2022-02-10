@@ -1,5 +1,4 @@
 # pylint: disable=C0103
-__docformat__ = "restructuredtext en"
 
 import base64
 import itertools
@@ -997,28 +996,28 @@ def disk(center: tuple, radius: float, shape: tuple = None) -> list:
     return np.where(mask)
 
 
-def set_color(image: np.ndarray, coords: np.ndarray, color: np.ndarray, alpha: np.float = 1.0 ):
-  """
-  Set pixel color in the image at the given coordinates.
-  Coordinates that exceed the shape of the image will be ignored.
-  
-  Args:
-    image: numpy array of shape (H, W, C)
-    coords: numpy array of shape (N, 2)
-    color: numpy array of shape (C,)
-    alpha: float in [0, 1]
-  
-  Returns:
-    numpy array of shape (H, W, C)
-  """
-  coords = np.round(coords).astype(np.int32)
-  coords = coords[coords[:, 0] >= 0, :]
-  coords = coords[coords[:, 0] < image.shape[0], :]
-  coords = coords[coords[:, 1] >= 0, :]
-  coords = coords[coords[:, 1] < image.shape[1], :]
-  image[coords[:, 0], coords[:, 1], :] = (
-      image[coords[:, 0], coords[:, 1], :] * (1 - alpha) + color * alpha
-  )
-  return image
+def set_color(
+    image: np.ndarray, coords: np.ndarray, color: np.ndarray, alpha: np.float = 1.0
+):
+    """
+    Set pixel color in the image at the given coordinates.
+    Coordinates that exceed the shape of the image will be ignored.
 
+    Args:
+      image: numpy array of shape (H, W, C)
+      coords: numpy array of shape (N, 2)
+      color: numpy array of shape (C,)
+      alpha: float in [0, 1]
 
+    Returns:
+      numpy array of shape (H, W, C)
+    """
+    coords = np.round(coords).astype(np.int32)
+    coords = coords[coords[:, 0] >= 0, :]
+    coords = coords[coords[:, 0] < image.shape[0], :]
+    coords = coords[coords[:, 1] >= 0, :]
+    coords = coords[coords[:, 1] < image.shape[1], :]
+    image[coords[:, 0], coords[:, 1], :] = (
+        image[coords[:, 0], coords[:, 1], :] * (1 - alpha) + color * alpha
+    )
+    return image

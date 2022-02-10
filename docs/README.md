@@ -6,6 +6,7 @@
 
 - [`frame`](./frame.md#module-frame)
 - [`haarcascades`](./haarcascades.md#module-haarcascades)
+- [`dlib`](./_dlib.md#module-_dlib)
 - [`stream`](./stream.md#module-stream)
 - [`utils`](./utils.md#module-utils)
 
@@ -13,6 +14,7 @@
 
 - [`frame.Frame`](./frame.md#class-frame): A class to represent a frame of video.
 - [`haarcascades.Haarcascades`](./haarcascades.md#class-haarcascades): Class for loading and using haarcascades.
+- [`dlib.Dlib`](./_dlib.md#class-_dlib): Provides a class for loading and using dlib models. 
 - [`stream.VideoStream`](./stream.md#class-videostream): A class for streaming video from a camera.
 - [`utils.TemplateResponse`](./utils.md#class-templateresponse): TemplateResponse class.
 

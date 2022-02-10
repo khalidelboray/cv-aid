@@ -1,6 +1,4 @@
-# pydoctor --project-base-dir=. --make-html --docformat=restructuredtext cv_aid/
 # pylint: disable=C0103
-__docformat__ = "restructuredtext en"
 
 import os
 import cv2
@@ -14,10 +12,10 @@ _is_dl_available = True
 try:
     import dlib
     from cv_aid._dlib import Dlib
+
     _dlib = Dlib()
 except ImportError:
     _is_dl_available = False
-
 
 
 class Frame:  # pylint: disable=too-many-public-methods
@@ -284,7 +282,7 @@ class Frame:  # pylint: disable=too-many-public-methods
           thickness(int, optional): The thickness of the box. (Default value = 1)
           line_type(int, optional): The type of the box. (Default value = cv2.LINE_8)
           is_max(bool, optional): Whether or not to draw the max box. (Default value = False)
-          
+
         Returns:
           The resulting frame.
 
@@ -480,9 +478,9 @@ class Frame:  # pylint: disable=too-many-public-methods
     def dlib(self):
         """Provides access to the dlib."""
         if not _is_dl_available:
-          raise ImportError(
-              "Dlib is not installed. Please install it with `pip install dlib`. or run `pip install cv_aid[dlib]`."
-          )
+            raise ImportError(
+                "Dlib is not installed. Please install it with `pip install dlib`. or run `pip install cv_aid[dlib]`."
+            )
         # Create the dlib class if it doesn't exist
         if not hasattr(self, "_dlib") or getattr(self, "_dlib") is None:
             self._dlib = _dlib

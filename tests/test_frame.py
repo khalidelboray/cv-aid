@@ -16,7 +16,7 @@ class Test(unittest.TestCase):
 
     def test_frame_save(self):
         frame = Frame.load(f"{base_path}/test.webp")
-        frame.save("test_save.webp",base_path)
+        frame.save("test_save.webp", base_path)
         self.assertTrue(os.path.exists(f"{base_path}/test_save.webp"))
         os.remove(f"{base_path}/test_save.webp")
 
