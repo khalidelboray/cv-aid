@@ -23,9 +23,7 @@ def find_images(path: Path) -> Generator:
 
     """
     for file in path.iterdir():
-        if file.is_dir():
-            continue
-        if filetype.is_image(file):
+       if not file.is_dir() and filetype.is_image(file):
             yield file
 
 
@@ -41,9 +39,7 @@ def find_videos(path: Path) -> Generator:
 
     """
     for file in path.iterdir():
-        if file.is_dir():
-            continue
-        if filetype.is_video(file):
+      if not file.is_dir() and filetype.is_video(file):
             yield file
 
 
@@ -59,9 +55,7 @@ def find_fonts(path: Path) -> Generator:
 
     """
     for file in path.iterdir():
-        if file.is_dir():
-            continue
-        if filetype.is_font(file):
+        if not file.is_dir() and filetype.is_font(file):
             yield file
 
 
